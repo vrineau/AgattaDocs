@@ -184,6 +184,7 @@ All commands used herein have been conceived as modules. All of them are parts o
    <img src="https://i.imgur.com/6Cr1Rx1.png" alt="agatta_main" width="550"/>
 </p>
 
+
 ## References
 
 * Dowding, E. M., Ebach, M. C., & Mavrodiev, E. V. (2021). Validating marine Devonian biogeography: a study in bioregionalization. Palaeontology, 1-15. https://doi.org/10.1111/pala.12578
