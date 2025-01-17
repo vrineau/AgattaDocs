@@ -1,0 +1,671 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Tutorial &#8212; AgattaDocs</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Tutorial';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Output files" href="Output%20files.html" />
+    <link rel="prev" title="Introduction" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/agatta.png" class="logo__image only-light" alt="AgattaDocs - Home"/>
+    <img src="_static/agatta.png" class="logo__image only-dark pst-js-only" alt="AgattaDocs - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Output%20files.html">Output files</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FTutorial.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Tutorial.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Tutorial</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#before-you-start">Before you start</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#help">Help</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-three-taxon-analysis">Example 1: three-taxon analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-interpretation-of-the-results">Example 2: interpretation of the results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3-biogeographic-analysis">Example 3: biogeographic analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="tutorial">
+<h1>Tutorial<a class="headerlink" href="#tutorial" title="Link to this heading">#</a></h1>
+<p>Agatta is a three-item analysis python 3 program for estimating an optimal tree given a set of input rooted trees. Agatta can be used for all types of phylogenetic analysis: in morphology, with characters coded as hierarchies, in gene supertree analysis, or in total evidence with a mix of morphological characters and gene trees. The software can also be used for cladistic biogeography analysis where an areagram is obtained by congruence of phylogenies, and can be used whenever the goal is to congruence several rooted trees in order to obtain one or several optimal trees.</p>
+<p>For any questions, issues, or bug report, please use the <a class="reference external" href="https://github.com/vrineau/Agatta/issues">issues github page</a>. Please subscribe to the mailing list for updates.</p>
+<section id="before-you-start">
+<h2>Before you start<a class="headerlink" href="#before-you-start" title="Link to this heading">#</a></h2>
+<p>Refer to readme in addition to this tutorial.</p>
+<p>Before starting this tutorial, please download all <a class="reference external" href="https://github.com/vrineau/Agatta/tree/main/data">datasets</a>.</p>
+<p>The tutorial requires the installation of the following programs:</p>
+<ul class="simple">
+<li><p>PAUP* (part ‘command-line binaries’ for Linux et MacOS): <a class="reference external" href="https://paup.phylosolutions.com/get-paup/">https://paup.phylosolutions.com/get-paup/</a></p></li>
+<li><p>Python 3.7 or upper: <a class="reference external" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>. Beginner tip: make sure that python can be called directly from the command prompt, so that you don’t have to write the whole path from the python executable every time you want to run a command. This can be made by ticking the box ‘<a class="reference external" href="https://miro.medium.com/max/1344/0*7nOyowsPsGI19pZT.png">Add Python 3 to PATH</a>’ when installing Python 3 for the first time. If the ‘pip’ and ‘python’ commands doesn’t work, reinstall python and tick the checkbox.</p></li>
+</ul>
+<section id="installation">
+<h3>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h3>
+<p>Agatta currently has no GUI. You need to run it through command-line.</p>
+<p>Open a terminal. Once the terminal opens, do</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">Agatta</span>
+</pre></div>
+</div>
+<p>Python 3.7 or higher must be installed prior to Agatta (if pip is not recognised as a valid command, you may need to add Python to environment variables; an option is to rerun the Python installer and check the box <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Python</span> <span class="pre">3.6</span> <span class="pre">to</span> <span class="pre">PATH</span></code>). To check that installation has worked properly, do</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">agatta</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+<p>which should display current version number.</p>
+</section>
+</section>
+<section id="help">
+<h2>Help<a class="headerlink" href="#help" title="Link to this heading">#</a></h2>
+<p>To get help, do</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">agatta</span> <span class="n">help</span>
+</pre></div>
+</div>
+<p>displays the main Agatta commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Usage</span><span class="p">:</span>
+    <span class="n">agatta</span> <span class="n">analysis</span>         <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span>        <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+    <span class="n">agatta</span> <span class="n">tripdec</span>          <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span>        <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+    <span class="n">agatta</span> <span class="n">convert</span>          <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span>        <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+    <span class="n">agatta</span> <span class="n">fp</span>               <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span>        <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+    <span class="n">agatta</span> <span class="n">consensus</span>        <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span>        <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+    <span class="n">agatta</span> <span class="n">describetree</span>     <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span>        <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+    <span class="n">agatta</span> <span class="n">hmatrix</span>          <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span>        <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+    <span class="n">agatta</span> <span class="n">support</span>          <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+    <span class="n">agatta</span> <span class="n">chartest</span>         <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+    <span class="n">agatta</span> <span class="n">standardisation</span>  <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+    <span class="n">agatta</span> <span class="n">help</span>             <span class="o">&lt;</span><span class="n">command</span><span class="o">&gt;</span>
+    <span class="n">agatta</span> <span class="o">-</span><span class="n">h</span> <span class="o">|</span> <span class="o">--</span><span class="n">help</span>
+    <span class="n">agatta</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+<p>For a specific command, for example if you want more information about <code class="docutils literal notranslate"><span class="pre">analysis</span></code>, do</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">agatta</span> <span class="n">help</span> <span class="n">analysis</span>
+</pre></div>
+</div>
+</section>
+<section id="example-1-three-taxon-analysis">
+<h2>Example 1: three-taxon analysis<a class="headerlink" href="#example-1-three-taxon-analysis" title="Link to this heading">#</a></h2>
+<p>We will next run Agatta on several input datasets. Commands line must be run in the same order as in this tutorial.</p>
+<p>From the<code class="docutils literal notranslate"><span class="pre">data</span></code> directory, run</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">agatta</span> <span class="n">analysis</span> <span class="n">song_gen</span><span class="o">.</span><span class="n">txt</span> <span class="o">--</span><span class="n">software</span><span class="o">=</span><span class="n">paup</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=</span><span class="n">rslt_song</span> <span class="o">--</span><span class="n">softpath</span><span class="o">=/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">paup</span><span class="o">/</span><span class="n">paup4a168_ubuntu64</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">--softpath</span></code> flag is useless for windows users who have installed PAUP*.</p>
+<p>This test file (source: <a class="reference external" href="https://github.com/smirarab/ASTRAL/tree/master/main/test_data">ASTRAL github page</a>) is based on the Song et. al. dataset for molecular analysis of mammal species.</p>
+<p>The analysis command performs a three-item analysis on the set of trees stored in the input file. The trees are decomposed into triplets and then an algorithm will search for the optimal tree(s) (the trees in agreement with the maximum of triplets) which are stored in <code class="docutils literal notranslate"><span class="pre">rslt_song.tre</span></code> (the name <code class="docutils literal notranslate"><span class="pre">rslt_song</span></code> is set by the <code class="docutils literal notranslate"><span class="pre">prefix</span></code> flag above). All trees resulting from analyses with Agatta are written in newick format. <a class="reference external" href="http://tree.bio.ed.ac.uk/software/figtree/">Figtree</a> is an example of software allowing to visualize trees in newick format (it works under Linux, Windows, and Mac).</p>
+<p>On the same dataset, the <code class="docutils literal notranslate"><span class="pre">tripdec</span></code> command performs only the first part of <code class="docutils literal notranslate"><span class="pre">analysis</span></code> (tree decomposition into triplets)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">agatta</span> <span class="n">tripdec</span> <span class="n">song_gen</span><span class="o">.</span><span class="n">txt</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=</span><span class="n">triplist_song</span>
+</pre></div>
+</div>
+<p>A <code class="docutils literal notranslate"><span class="pre">.triplet</span></code> file is systematically generated which gives the list of triples and their associated weight.</p>
+<p>The convert command requires a .triplet file and converts it, in this case to a PAUP* matrix (flag <code class="docutils literal notranslate"><span class="pre">--software</span></code>).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">agatta</span> <span class="n">convert</span> <span class="n">triplist_song</span><span class="o">.</span><span class="n">triplet</span> <span class="o">--</span><span class="n">taxarep1</span><span class="o">=</span><span class="n">triplist_song</span><span class="o">.</span><span class="n">taxabloc</span> <span class="o">--</span><span class="n">filetype</span><span class="o">=</span><span class="n">triplets</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=</span><span class="n">tmrp_song</span> <span class="o">--</span><span class="n">software</span><span class="o">=</span><span class="n">paup</span>
+</pre></div>
+</div>
+</section>
+<section id="example-2-interpretation-of-the-results">
+<h2>Example 2: interpretation of the results<a class="headerlink" href="#example-2-interpretation-of-the-results" title="Link to this heading">#</a></h2>
+<p>A hierarchical matrix can be used as input file instead of newick trees. We will use the matrix from Gill and Leis (2019) designed for three-taxon analysis of fishes. The <code class="docutils literal notranslate"><span class="pre">hmatrix</span></code> command converts the matrix into a list of corresponding rooted trees</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">agatta</span> <span class="n">hmatrix</span> <span class="n">gill_morpho</span><span class="o">.</span><span class="n">hmatrix</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=</span><span class="n">hmatrix_gill</span>
+</pre></div>
+</div>
+<p>A complete analysis from a hierarchical matrix can be performed in the same way as with newick files</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">agatta</span> <span class="n">analysis</span> <span class="n">gill_morpho</span><span class="o">.</span><span class="n">hmatrix</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=</span><span class="n">rslt_gill</span> <span class="o">--</span><span class="n">software</span><span class="o">=</span><span class="n">paup</span> <span class="o">--</span><span class="n">softpath</span><span class="o">=/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">paup</span><span class="o">/</span><span class="n">paup4a168_ubuntu64</span> <span class="o">--</span><span class="n">analysis</span><span class="o">=</span><span class="n">heuristic</span>
+</pre></div>
+</div>
+<p>The following command gives various information about one or more rooted trees in newick format</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">agatta</span> <span class="n">describetree</span> <span class="n">rslt_gill</span><span class="o">.</span><span class="n">tre</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">support</span></code> command with the <code class="docutils literal notranslate"><span class="pre">--index=ri</span></code> flag gives the global and per-character retention index. The results are displayed at the command prompt and are also saved in the <code class="docutils literal notranslate"><span class="pre">rslt_gill.ri</span></code> file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">agatta</span> <span class="n">support</span> <span class="n">rslt_gill</span><span class="o">.</span><span class="n">tre</span> <span class="n">rslt_gill</span><span class="o">.</span><span class="n">input</span><span class="o">.</span><span class="n">tre</span> <span class="o">--</span><span class="n">index</span><span class="o">=</span><span class="n">ri</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=</span><span class="n">rslt_gill</span>
+</pre></div>
+</div>
+<p>Testing character states in 3ia as described by Cao (2008) and modified by Rineau (2017) can be performed using <code class="docutils literal notranslate"><span class="pre">chartest</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">agatta</span> <span class="n">chartest</span> <span class="n">rslt_gill</span><span class="o">.</span><span class="n">tre</span> <span class="n">rslt_gill</span><span class="o">.</span><span class="n">input</span><span class="o">.</span><span class="n">tre</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=</span><span class="n">chartest_gill</span>
+</pre></div>
+</div>
+<p>The previous results are written in two files. However, reading them may appear difficult. The <code class="docutils literal notranslate"><span class="pre">--pdf</span></code> flag allows the visualisation of the character test results.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">agatta</span> <span class="n">chartest</span> <span class="n">rslt_gill</span><span class="o">.</span><span class="n">tre</span> <span class="n">rslt_gill</span><span class="o">.</span><span class="n">input</span><span class="o">.</span><span class="n">tre</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=</span><span class="n">chartest_gill</span> <span class="o">--</span><span class="n">pdf</span>
+</pre></div>
+</div>
+<p>Below is an example with character 1, state 1 (#1.1):</p>
+<img src="https://i.imgur.com/qMmmOb9.png" alt="agatta_logotype" width="850"/>
+<p>The green/red circles shows the localisation of the synapomorphy/homoplasies.</p>
+</section>
+<section id="example-3-biogeographic-analysis">
+<h2>Example 3: biogeographic analysis<a class="headerlink" href="#example-3-biogeographic-analysis" title="Link to this heading">#</a></h2>
+<p>The source files for this third example are from a cladistic biogeographic analysis performed in three-taxon analysis (Dowding et al. 2021; analysis 1 for Devonian fishes, brachiopods, phyllocarids and trilobites).</p>
+<p>The following command line performs a full biogeographic analysis</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">agatta</span> <span class="n">analysis</span> <span class="n">dowding_biogeo</span><span class="o">.</span><span class="n">txt</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=</span><span class="n">rslt_dowding</span> <span class="o">--</span><span class="n">software</span><span class="o">=</span><span class="n">paup</span> <span class="o">--</span><span class="n">softpath</span><span class="o">=/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">paup</span><span class="o">/</span><span class="n">paup4a168_ubuntu64</span> <span class="o">--</span><span class="n">rosetta</span><span class="o">=</span><span class="n">dowding_biogeo_map</span><span class="o">.</span><span class="n">csv</span> <span class="o">--</span><span class="n">replicates</span><span class="o">=</span><span class="mi">100</span> <span class="o">--</span><span class="n">consensus</span><span class="o">=</span><span class="n">strict</span> <span class="o">--</span><span class="n">analysis</span><span class="o">=</span><span class="n">heuristic</span>
+</pre></div>
+</div>
+<p>Note that the biogeographic analysis requires a mapping table (csv file) with two columns, the left one with the taxa and the right one with the corresponding areas</p>
+<blockquote>
+<div><p>AJ5,Cordillerian_M
+AE2,Uralian_E
+P12,Uralian_E
+P16,Uralian_E
+P17,Uralian_E
+P12,Uralian_M</p>
+</div></blockquote>
+<p>Here the separator is a comma, it can also be a semicolon, a space, etc. The path to the input mapping file must be given to Agatta using the flag <code class="docutils literal notranslate"><span class="pre">--rosetta</span></code>.</p>
+<p>We can use the <code class="docutils literal notranslate"><span class="pre">fp</span></code> command to remove duplications from trees by Triplet Maximisation Subtree (TMS) or Free-Paralogy Subtree (FPS) analysis (TMS by default, for FPS add the flag <code class="docutils literal notranslate"><span class="pre">--repetitions=FPS</span></code>).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">agatta</span> <span class="n">fp</span> <span class="n">dowding_biogeo</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>Automatic removal of duplications is always performed for triplet decomposition as decomposition cannot be performed if duplication instances are still present.</p>
+<p>Standardisation is the step that allows to move from homologies to characters, and in this case in cladistic biogeography to move from phylogenies to areagrams. It is automatically performed when using <code class="docutils literal notranslate"><span class="pre">analysis</span></code>. The command <code class="docutils literal notranslate"><span class="pre">standardisation</span></code> do only that part</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">agatta</span> <span class="n">standardisation</span> <span class="n">dowding_biogeo</span><span class="o">.</span><span class="n">txt</span> <span class="n">dowding_biogeo_map</span><span class="o">.</span><span class="n">csv</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=</span><span class="n">standardisation_dowding</span>
+</pre></div>
+</div>
+<p>The file <code class="docutils literal notranslate"><span class="pre">results_dowding.tre</span></code> contains more than 2000 optimal cladograms. A consensus can then be produced to synthetise this huge nomber of trees</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">agatta</span> <span class="n">consensus</span> <span class="n">rslt_dowding</span><span class="o">.</span><span class="n">tre</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=</span><span class="n">consensus_dowding</span>
+</pre></div>
+</div>
+<p>A reduced cladistic consensus can also be performed using the <code class="docutils literal notranslate"><span class="pre">--consensus=rcc</span></code> flag (Wilkinson 1994).</p>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>All commands used herein have been conceived as modules. All of them are parts of the Agatta software, and can be synthetised into this workflow.</p>
+<p align="center">
+   <img src="https://i.imgur.com/6Cr1Rx1.png" alt="agatta_main" width="550"/>
+</p>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Dowding, E. M., Ebach, M. C., &amp; Mavrodiev, E. V. (2021). Validating marine Devonian biogeography: a study in bioregionalization. Palaeontology, 1-15. <a class="reference external" href="https://doi.org/10.1111/pala.12578">https://doi.org/10.1111/pala.12578</a></p></li>
+<li><p>Gill, A. C., &amp; Leis, J. M. (2019). Phylogenetic position of the fish genera Lobotes, Datnioides and Hapalogenys, with a reappraisal of acanthuriform composition and relationships based on adult and larval morphology. Zootaxa, 4680(1), 1-81. <a class="reference external" href="https://doi.org/10.11646/zootaxa.4680.1.1">https://doi.org/10.11646/zootaxa.4680.1.1</a></p></li>
+<li><p>Song, S., Liu, L., Edwards, S. V., &amp; Wu, S. (2012). Resolving conflict in eutherian mammal phylogeny using phylogenomics and the multispecies coalescent model. Proceedings of the National Academy of Sciences, 109(37), 14942-14947. <a class="reference external" href="https://doi.org/10.1073/pnas.1211733109">https://doi.org/10.1073/pnas.1211733109</a></p></li>
+<li><p>Wilkinson, M. (1994). Common cladistic information and its consensus representation: reduced Adams and reduced cladistic consensus trees and profiles. Systematic Biology, 43(3), 343-368. <a class="reference external" href="https://doi.org/10.1093/sysbio/43.3.343">https://doi.org/10.1093/sysbio/43.3.343</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Introduction</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Output%20files.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Output files</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#before-you-start">Before you start</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#help">Help</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-three-taxon-analysis">Example 1: three-taxon analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-interpretation-of-the-results">Example 2: interpretation of the results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3-biogeographic-analysis">Example 3: biogeographic analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Valentin Rineau
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
