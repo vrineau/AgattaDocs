@@ -4,7 +4,6 @@ This page lists all the output files of Agatta according to the command and opti
 
 The name of an output file is `prefix.extension`. The extension depends on the command (see table below) and reflects the content of the file. The prefix is by default `agatta_out` but can be changed by setting the `prefix=filename` flag.
 
-
 | Extension                       | Command                                                          | Content                                                                                                                                                                                                                                                                            |
 | ------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `.log`                          | `analysis`                                                       | Log of the analysis.                                                                                                                                                                                                                                                               |
