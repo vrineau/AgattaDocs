@@ -8,7 +8,7 @@ Three-item analysis was originally conceived under the cladistic theory, and can
 
 Agatta is user-friendly and offers many specific features to help pre or postprocessing rooted trees. Such features include decomposing trees with duplicated tips into duplication-free subtrees, consensus methods, several triplet-based support metrics, precise tree description, character state test and mapping, and file reformating. 
 
-## Installation
+##Installation
 
 Agatta works on Windows, Unix/Linux and macOS.
 
