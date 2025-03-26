@@ -5,4 +5,6 @@ format: jb-book
 root: intro
 chapters:
 - file: Tutorial
+- file: Input files
 - file: Output files
+- file: Functions
