@@ -36,11 +36,6 @@ jobs:
         jupyter-book build .
     - name: list dir
       run: ls
-    - name: Build the JupyterLite site
-      run: |
-        cp -r * content/
-        jupyter lite build --contents content --output-dir dist
-        cp -r _build/html dist/
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
