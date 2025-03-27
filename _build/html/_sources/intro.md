@@ -1,6 +1,6 @@
 <img src="https://github.com/vrineau/agatta/blob/main/agatta/agatta.png?raw=true" alt="agatta_logotype" width="700"/>
 
-## Presentation
+# Introduction to Agatta
 
 Agatta is a python package for three-item analysis (Nelson and Platnick, 1991) and other rooted tree applications. Three-item analysis can be considered as a supertree method (Kitching et al., 1998). The input trees are decomposed into triplets, then coded using triplet matrix representation. Finally, a tree is estimated on the matrix using a congruence maximisation criterion. Agatta implements several triplet weighting schemes, and is technically close to the Weighted Minimum Triplet Inconsistency problem (Byrka et al. 2010), a triplet equivalent of the Weighted Minimum Quartet Inconsistency problem (Lafond and Scornavacca, 2019).
 
@@ -8,43 +8,29 @@ Three-item analysis was originally conceived under the cladistic theory, and can
 
 Agatta is user-friendly and offers many specific features to help pre or postprocessing rooted trees. Such features include decomposing trees with duplicated tips into duplication-free subtrees, consensus methods, several triplet-based support metrics, precise tree description, character state test and mapping, and file reformating. 
 
-##Installation
+## Installation and requirements
 
 Agatta works on Windows, Unix/Linux and macOS.
 
-This package requires Python version 3.8 or higher.
+This package requires Python version 3.8 or higher.  It has been tested for 3.8, 3.9, 3.10, and 3.11 using ubuntu 20.04, macos 13, and windows 11.
 
-Agatta and all its dependencies can be installed using `pip install Agatta`. Detailed explanations for installing Agatta are available in the [tutorial](intro.md).
+Agatta and all its dependencies can be installed using `pip install Agatta` through the shell. More explanations for installing Agatta are available in the [tutorial](intro.md).
 
 The package implements a pipeline for efficient heuristic searches that requires the installation of WQFM (https://github.com/Mahim1997/wQFM-2020), TNT (http://www.lillo.org.ar/phylogeny/tnt/), or a PAUP* command-line binary (http://phylosolutions.com/paup-test).
 
 ## Documentation and Support
 
-The official repository is on [GitHub](https://github.com/vrineau/Agatta)
+A complete tutorial and documentation is [available on the documentation website](intro.md).
 
-A complete tutorial is [available here](intro.md).
+The official repository is on [GitHub](https://github.com/vrineau/Agatta). Agatta is published on [Pypi](https://pypi.org/project/Agatta/).
 
 An help for all commands is available directly using `agatta help`.
 
 If you have questions, feel free to pull requests on [GitHub Issues](https://github.com/vrineau/Agatta/issues).
 
-## Usage examples
+## Bug report
 
-### Quick analysis
-
-Agatta allows several input trees formats like newick, nexus, nexml, or character matrix format. A generic analysis to do a three-item analysis on a collection of rooted trees stored in a file with default parameters (PAUP* heuristic search, 1000 replicates, triplets weighted using Fractional Weighting; Rineau et al. 2021) would be:
-```
-agatta analysis <file> --software=paup --softpath=/path/to/paup-executable
-```
-The `--softpath` and `--software=paup` flags are required.
-
-### Cladistic biogeography analysis
-
-To run a three-area analysis on a collection of rooted phylogenies stored in newick format in a file with default parameters (PAUP* heuristic search, 1000 replicates, triplets weighted according to Rineau et al. (2021), Multiple-Area Single Taxa automatically removed, repetitions managed using Triplet Maximisation Subtrees algorithm):
-```
-agatta analysis <file> --software=paup --softpath=/path/to/paup-executable  --rosetta=<mapfile>
-```
-This line is identical as for quick analysis plus a mapping file (<mapfile>) in csv with two columns to give the correspondance between taxa (left column) and areas (right column). 
+Contact valentin.rineau@sorbonne-universite.fr or post on [Agatta issues page](https://github.com/vrineau/Agatta/issues).
 
 ## License
 

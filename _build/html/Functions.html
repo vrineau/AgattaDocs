@@ -1,0 +1,1317 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Functions &#8212; AgattaDocs</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Functions';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Output files" href="Output%20files.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/agatta.png" class="logo__image only-light" alt="AgattaDocs - Home"/>
+    <img src="_static/agatta.png" class="logo__image only-dark pst-js-only" alt="AgattaDocs - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction to Agatta
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Input%20files.html">Input files</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="Output%20files.html">Output files</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Functions</a></li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="hhttps://github.com/vrineau/AgattaDocs" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="hhttps://github.com/vrineau/AgattaDocs/issues/new?title=Issue%20on%20page%20%2FFunctions.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Functions.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Functions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Functions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis">Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hmatrix">hmatrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tripdec">Tripdec</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#standardisation">Standardisation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convert">Convert</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fp">fp</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#consensus">consensus</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#support">Support</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chartest">Chartest</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#describetree">describetree</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="functions">
+<h1>Functions<a class="headerlink" href="#functions" title="Link to this heading">#</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">analysis</span></code> is the main Agatta function, which can be used to perform a standard cladistic or biogeographic analysis from hierarchical matrices or newick files. The analysis function can also return the following two interpretation tools:</p>
+<ol class="arabic simple">
+<li><p>the global retention index, the retention index per character, per state, and per free-subtree.</p></li>
+<li><p>The procedure for testing character states in the context of taxonomic homology proposed by Cao (2008).</p></li>
+</ol>
+<p>The following figure summarises the Agatta pipeline for the <code class="docutils literal notranslate"><span class="pre">analysis</span></code> function.</p>
+<p><img alt="6Cr1Rx1" src="https://hackmd.io/_uploads/By2bhjY3yg.png" /></p>
+<p>The following functions can be used when the user wants to perform only a specific part of the analysis pipeline:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hmatrix</span></code>: converts a hierarchical matrix into a newick file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tripdec</span></code>: decompose input trees into three-item statements and compute their weights.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">standardisation</span></code>: replace the terminals of trees by others. Generally used in biogeographic analysis to replace OTU in phylogenetic trees by areas of endemism.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">convert</span></code>: compute a triplet matrix readable by an external software (PAUP*, TNT, WQFM, wTREE-QMC).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fp</span></code>: compute a free-paralogy analysis for character trees with repeated leaves.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consensus</span></code>: compute a consensus tree.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">support</span></code>: compute the retention index (global, per character, per state, per free-paralogy subtree).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">chartest</span></code>: compute the character state test procedure for all character states in three-item analysis.</p></li>
+</ul>
+<p>Finally, the <code class="docutils literal notranslate"><span class="pre">describetree</span></code> function is separate and can be used to obtain simple information about trees, their number of leaves, polytomies, etc. This can be useful when manipulating trees before and after analysis.</p>
+<p>The following section explains how each function works, as also shown using the <code class="docutils literal notranslate"><span class="pre">help</span></code> function, for example <code class="docutils literal notranslate"><span class="pre">agatta</span> <span class="pre">help</span> <span class="pre">analysis</span></code>.</p>
+<section id="analysis">
+<h2>Analysis<a class="headerlink" href="#analysis" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Main function of the Agatta python package. Allow to perform a three-item
+analysis, e.g., in the context of systematics phylogenetics, using
+hierarchical characters, or in cladistic biogeography. The cladogram(s)
+obtained by congruence is the tree that maximises the amount of hypotheses
+of cladistic relationships (i.e., the three-item statements) deduced from
+the input trees (the characters).
+The analysis can be performed using a text file containing a hierarchical
+matrix (see section mandatory parameters below for informations about
+the format) or newick rooted trees encoded in a newick, nexus, or nexml
+file.
+There are no constraints on the input trees excepted that they must
+be rooted to perform the analysis. If they are repeated leaves
+(polymorphism), they are automatically removed (several methods
+are implemented, see below).
+Several options are available for analysing the results: the user can
+compute a consensus when several cladograms are optimal, a specific
+character-state testing procedure can be used to test whether each
+character state (i.e., each informative node of a tree) is a synapomorphy
+or an homoplasy, and finally a retention index can be computed to
+obtained the proportion of phylogenetic relationships of characters
+that have been retained in the optimal cladogram.
+
+Usage:
+
+    agatta analysis &lt;file&gt; [-s -v --analysis=&lt;type&gt; --chartest
+                                  --consensus=&lt;type&gt; --parallel=&lt;int&gt;
+                                  --pdf --prefix=&lt;file&gt;
+                                  --repetitions=&lt;type&gt; --replicates=&lt;int&gt;
+                                  --ri --rosetta=&lt;file&gt; --softpath=&lt;path&gt;
+                                  --software=&lt;type&gt; --taxarep1=&lt;path&gt;
+                                  --weighting=&lt;type&gt; --detailed_tripdec]
+
+    Mandatory parameters:
+
+        &lt;file&gt; Path of the file containing the character trees.
+        The trees can be encoded for Agatta in a file in several ways:
+          - a hierarchical matrix,
+          - A newick file with a single newick tree on each line,
+          - A nexus file (extension in .nex),
+          - A nexml file (extension in .nexml).
+        The following url give more information on how to build input
+        files: URL.
+
+    Optionnal parameters:
+
+        -s  Silent mode.
+        -v  Verbose mode.
+        --analysis=&lt;type&gt;  Type of tree search analysis between an exact
+        branch and bound (&#39;bandb&#39;) or an heuristic tree search
+        (&#39;heuristic&#39;). The heuristic search is only available through
+        PAUP*, TNT, WQFM, or wTREE-QMC thus it is mandatory to add the flag
+        --software=tnt, --software=paup, --software=wqfm, or 
+        software=wtree-qmc (and the flag --softpath accordingly).
+        By default the analysis is in branch and bound below 15 terminals
+        and heuristic otherwise.
+        --chartest  Test and locates all character states on the cladogram.
+        Each character state can be a synapomorphy if the hypothesis is
+        accepted or an homoplasy if the hypothesis of sameness is rejected.
+        Two output files are writen: prefix.chartest gives all locations
+        of the states on the cladogram and if the test is passed or not,
+        sorted by state, and prefix.chartest_node gives the same
+        information sorted by node.
+        --consensus=&lt;type&gt;  Compute a consensus which can be a strict
+        consensus (&#39;strict&#39;) or a reduced cladistic consensus (&#39;rcc&#39;,
+        Wilkinson 1994) which is able to detect more common information
+        in subtrees. By default, the flag without argument produces a
+        strict consensus. The output file is prefix.constrict or
+        prefix.rcc.
+        --parallel=&lt;type&gt;  Option for choosing if the analysis is made
+        using multiprocessing or not. This argument can be:
+          - &#39;not&#39; if the user does not wan to use multiprocessing.
+          - &#39;auto&#39; for automatic detection of the number of cpu.
+          - any integer corresponding to the number of cpu allowed.
+        By default, the analysis is made in parallel using all available
+        cpu. This option can be used in the case of very large character
+        tree that can saturate the RAM if too many parallel processing are
+        active.
+        --pdf  Compute a pdf file to visualise character states on
+        the cladogram if --chartest is used. One page for each state is
+        writen. The file is named prefix.pdf.
+        --prefix=&lt;file&gt;  Prefix of all saving files. The complete path can
+        be used. By default, the prefix is &#39;agatta_out&#39; and all files are
+        saved in the directory of the first &lt;file&gt;.
+        --repetitions=&lt;type&gt;  The removal of repeated leaves in character
+        trees is made using the method of free-paralogy subtree.
+        Two algorithms are implemented, the original one from Nelson and
+        Ladiges (1996) (&#39;FPS&#39;) for dealing with paralogy in cladistic
+        biogeography, and the algorithm of Rineau et al. (2021) (&#39;TMS&#39;)
+        designed for all cases of repetitions (not only paralogy).
+        If the flag is not used and if repetitions are detected, they are
+        automatically removed using Rineau et al. algorithm&#39;s.
+        The repetition-free character trees are writen in prefix.poly and
+        each new tree receives an id, e.g. 1.2 corresponds to the second
+        repetition-free subtree computed from the 1st original character
+        tree.
+        --replicates=&lt;int&gt;  State the number of replicates in case
+        of an heuristic tree search. By default the heuristic search is
+        launched with 1000 replicates.
+        --ri  Compute the retention index of the resulting cladogram and
+        a retention index for each character which states the percentage
+        of phylogenetic information retained in the optimal cladogram.
+        The results are writen in prefix.ri.
+        --rosetta=&lt;file&gt;  If the input tree leaves are parts, cladistics
+        requires a standardisation step with replacement of parts to
+        wholes. It is especially important in cladistic biogeography where
+        terminal taxa are replaced by biogeographic areas. The rosetta flag
+        replaces leaves of input trees according to a csv file with its
+        path given as argument. The csv file is a table with two columns,
+        one with the name of the tree leaves and the second with their
+        corresponding names to be switched. The results of the
+        standardisation are writen in the file prefix.stand.
+        --softpath=&lt;path&gt;  Path of the software declared in --software.
+        --software=&lt;type&gt;  Choose how to perform the three-item analysis.
+        The analysis can be performed using the built-in branch and bound
+        in Agatta (&#39;agatta&#39;). &#39;paup&#39; and &#39;tnt&#39; can be used for branch and
+        bound or heuristic search. &#39;wqfm&#39; and &#39;wtree-qmc&#39; are conceived to 
+        perform heuristic searches only.
+        By default the analysis is made using built-in branch and bound.
+        However it works only with very few terminals.
+        User should consider to switch the software is the
+        analysis time appears to be too long. A prefix.nex file is
+        generated if &#39;paup&#39;, a prefix.tnt file for &#39;tnt&#39;, a
+        prefix.wqfm for &#39;wqfm&#39;, and a prefix.wtqmc for &#39;wtree-qmc&#39;.
+        --taxarep1=&lt;path&gt;  If the user wants to replace identifiers by real
+        leaf names in the result files, this flag can be used with a path
+        to a csv file with two columns, the first with the identifiers in
+        the actual newick strings and the other with the names the user
+        wants.
+        --weighting=&lt;type&gt;  Weighting scheme to use on triplets. The
+        type of weighting will change the results of the analysis.
+        The following schemes can be used:
+            - FW: Fractional weighting from Rineau et al. (2021),
+            - FWNL: Fractional weighting from Nelson and Ladiges (1992),
+            - UW: Uniform weighting from Nelson and Ladiges (1992),
+            - MW: Minimal weighting from Wilkinson et al. (2004),
+            - AW: Additive weighting : the weight of a triplet in additive
+              weighting corresponds to the number of trees in which the
+              triplet is present,
+            - NW: No weighting (all triplets have a weight of 1).
+        By default &#39;FW&#39; is used.
+        --detailed_tripdec Compute a detailed csv table showing the
+        link between triplet weights and character trees. Each column 
+        corresponds to one character (same order as &lt;file&gt;). Each line 
+        corresponds to a triplet. The last column and line give the sum
+        of all weights of the column or line, respectively.
+
+Output:
+
+    Four ouput files are writen all the time when using the analysis
+    command in addition to optionnal output files.
+    The files are:
+      - prefix.log is a log file with all the parameters of the analysis.
+      - prefix.triplet is a file with all triplets deduced from the input
+        character trees. Each row corresponds to one triplet with its
+        weight as a fraction and as a float.
+      - prefix.taxabloc is a table file with the correspondance between
+        leaf identifiers and names given in the input.
+      - prefix.tre is a newick file recording all the optimal cladograms
+        found during the analysis.
+</pre></div>
+</div>
+</section>
+<section id="hmatrix">
+<h2>hmatrix<a class="headerlink" href="#hmatrix" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>hmatrix converts a hierarchical matrix into rooted trees. Each column of
+the matrix corresponds to one tree.
+
+Usage:
+
+    agatta analysis &lt;file&gt; [-s -v --chardec --prefix=&lt;file&gt;]
+
+    Mandatory parameters:
+
+        &lt;file&gt;  Hierarchical matrix. A complete guide on the hierarchical
+        matrix format is available here: URL.
+
+    Optionnal parameters:
+
+        -s  Silent mode.
+        -v  Verbose mode.
+        --chardec  Decompose each tree into components (one subtree for
+        each informative node).
+        --prefix=&lt;file&gt;  Prefix of the saving file. The complete path can
+        be used. By default, the prefix is &#39;agatta_out&#39; and all files are
+        saved in the directory of the first &lt;file&gt;.
+
+Output:
+
+    One output file prefix.tre with the trees deduced from the hierarchical
+    matrix.
+</pre></div>
+</div>
+</section>
+<section id="tripdec">
+<h2>Tripdec<a class="headerlink" href="#tripdec" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Decomposes rooted tree(s) into minimal cladistic statements (triplets
+or three-item statements) stating that two leaves are closer between them
+than to a third. During decomposition the weight of each triplet is
+computed according to a specific weighting scheme. In three-item analysis,
+the weighted triplets are then analysed to compute the cladogram that is
+in agreement with the maximum amout of them.
+
+Usage:
+
+    agatta tripdec &lt;file&gt; [-s -v --parallel=&lt;int&gt; --prefix=&lt;file&gt; 
+                                 --taxarep1=&lt;path&gt; --weighting=&lt;type&gt;
+                                 --repetitions=&lt;type&gt; --detailed_tripdec]
+
+    Mandatory parameters:
+
+        &lt;file&gt; Path of the file containing the character trees.
+        The trees can be encoded for Agatta in a file in several ways:
+          - a hierarchical matrix,
+          - A newick file with a single newick tree on each line,
+          - A nexus file (extension in .nex),
+          - A nexml file (extension in .nexml).
+        The following url give more information on how to build input
+        files: URL.
+
+    Optionnal parameters:
+
+        -s  Silent mode.
+        -v  Verbose mode.
+        --parallel=&lt;type&gt;  Option for choosing if the analysis is made
+        using multiprocessing or not. This argument can be:
+          - &#39;not&#39; if the user does not wan to use multiprocessing.
+          - &#39;auto&#39; for automatic detection of the number of cpu.
+          - any integer corresponding to the number of cpu allowed.
+        By default, the analysis is made in parallel using all available
+        cpu. This option can be used in the case of very large character
+        tree that can saturate the RAM if too many parallel processing are
+        active.
+        --prefix=&lt;file&gt;  Prefix of all saving files. The complete path can
+        be used. By default, the prefix is &#39;agatta_out&#39; and all files are
+        saved in the directory of the first &lt;file&gt;.
+        --taxarep1=&lt;path&gt;  If the user wants to replace identifiers by real
+        leaf names in the result files, this flag can be used with a path
+        to a csv file with two columns, the first with the identifiers in
+        the actual newick strings and the other with the names the user
+        wants.
+        --weighting=&lt;type&gt;  Weighting scheme to use on triplets. The
+        type of weighting will change the results of the analysis.
+        The following schemes can be used:
+            - FW: Fractional weighting from Rineau et al. (2021),
+            - FWNL: Fractional weighting from Nelson and Ladiges (1992),
+            - UW: Uniform weighting from Nelson and Ladiges (1992),
+            - MW: Minimal weighting from Wilkinson et al. (2004),
+            - AW: Additive weighting : the weight of a triplet in additive
+              weighting corresponds to the number of trees in which the
+              triplet is present,
+            - NW: No weighting (all triplets have a weight of 1).
+        By default &#39;FW&#39; is used.
+        --detailed_tripdec Compute a detailed csv table showing the
+        link between triplet weights and character trees. Each column 
+        corresponds to one character (same order as &lt;file&gt;). Each line 
+        corresponds to a triplet. The last column and line give the sum
+        of all weights of the column or line, respectively.
+        --repetitions=&lt;type&gt;  The removal of repeated leaves in character
+        trees is made using the method of free-paralogy subtree.
+        Two algorithms are implemented, the original one from Nelson and
+        Ladiges (1996) (&#39;FPS&#39;) for dealing with paralogy in cladistic
+        biogeography, and the algorithm of Rineau et al. (2021) (&#39;TMS&#39;)
+        designed for all cases of repetitions (not only paralogy).
+        If the flag is not used and if repetitions are detected, they are
+        automatically removed using Rineau et al. algorithm&#39;s.
+        The repetition-free character trees are writen in prefix.poly and
+        each new tree receives an id, e.g. 1.2 corresponds to the second
+        repetition-free subtree computed from the 1st original character
+        tree.
+
+Output:
+
+    Two files are writen after decomposition. The main one is
+    prefix.triplet, a file containing all triplets deduced from the input
+    character trees. Each row corresponds to one triplet with its
+    weight as an integer (if UW, AW, or NW), or as a fraction and as a
+    float otherwise. The second file prefix.taxabloc is a table file with
+    the correspondance between leaf identifiers and names given in the
+    input trees.
+</pre></div>
+</div>
+</section>
+<section id="standardisation">
+<h2>Standardisation<a class="headerlink" href="#standardisation" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>This command is used for standardisation of characters in the context of
+cladistic biogeography, i.e., replacement of leaves using a correspondence
+table. In cladistic theory, the standardisation is the construction of
+character trees (hypotheses of kinship relationship between bearers) based
+on homologies (hypotheses of kinship relationships between parts). The
+standardisation is used to convert phylogenies in areagrams in cladistic
+biogeography. The only currently implemented option for managing MAST is
+their automatic deletion (i.e. MAST do not bear any unambiguous
+biogeographic information).
+
+Usage:
+
+    agatta standardisation &lt;file&gt; &lt;file&gt; [-s -v --prefix=&lt;file&gt;]
+
+    Mandatory parameters:
+
+        Two &lt;file&gt; arguments are requested with the standardisation
+        command. The first &lt;file&gt; is the path of the file containing the
+        character trees. The trees can be encoded for Agatta in a file in
+        several ways:
+          - a hierarchical matrix,
+          - A newick file with a single newick tree on each line,
+          - A nexus file (extension in .nex),
+          - A nexml file (extension in .nexml).
+        The following url give more information on how to build input
+        files: URL.
+        The second &lt;file&gt; argument is the path of a csv table with two
+        columns, the first column corresponds to the leaf names of input
+        trees, and the second column to corresponding names for
+        replacement. FOr example, in cladistic biogeography, taxa are in
+        the left column and corresponding areas in the right column.
+
+    Optionnal parameters:
+
+        -s  Silent mode.
+        -v  Verbose mode.
+        --prefix=&lt;file&gt;  Prefix of the saving files. The complete path can
+        be used. By default, the prefix is &#39;agatta_out&#39; and all files are
+        saved in the directory of the first &lt;file&gt;.
+
+Output:
+
+    One output newick file prefix.stand containing the trees after
+    leaf replacement.
+</pre></div>
+</div>
+</section>
+<section id="convert">
+<h2>Convert<a class="headerlink" href="#convert" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The convert command is intended to compute a triplet matrix readable by an
+external software (currently PAUP*, TNT, WQFM, wTREE-QMC are implemented) 
+from a file containing a hierarchical matrix, a list of trees, or a list of 
+triplets.
+
+Usage:
+
+    agatta convert &lt;file&gt; [-s -v --analysis=&lt;type&gt; --filetype=&lt;type&gt; --log
+                                  --parallel=&lt;int&gt; --prefix=&lt;file&gt;
+                                  --replicates=&lt;int&gt; --software=&lt;type&gt;
+                                  --taxarep1=&lt;path&gt; --weighting=&lt;type&gt;
+                                  --repetitions=&lt;type&gt;]
+
+    Mandatory parameters:
+
+        &lt;file&gt; Path of the file containing character trees or triplets.
+        The trees can be encoded for Agatta in a file in several ways:
+          - a hierarchical matrix,
+          - A newick file with a single newick tree on each line,
+          - A nexus file (extension in .nex),
+          - A nexml file (extension in .nexml).
+        The following url give more information on how to build input
+        files: URL.
+        The user can also use as input file a triplet file generated from
+        the Agatta tripdec command.
+
+    Optionnal parameters:
+
+        -s  Silent mode.
+        -v  Verbose mode.
+        --analysis=&lt;type&gt;  Type of tree search analysis between an exact
+        branch and bound (&#39;bandb&#39;) or an heuristic tree search
+        (&#39;heuristic&#39;). A line is writen accordingly in the output file.
+        By default the analysis is in branch and bound below 15 terminals
+        and heuristic otherwise.
+        --filetype=&lt;type&gt;  The input file can be a classic file containing
+        newick trees (newick file, nexus file, or nexml file) (&#39;trees&#39;), or
+        a list of triplets (&#39;triplets&#39;) generated using the Agatta tripdec
+        command.
+        --log  Add a line in the output file to generate a log file during
+        the PAUP* or TNT analysis.
+        --parallel=&lt;type&gt;  Option for choosing if the triplet decomposition
+        is made using multiprocessing or not. This argument can be:
+          - &#39;no&#39; if the user does not want to use multiprocessing.
+          - &#39;auto&#39; for automatic detection of the number of cpu.
+          - any integer corresponding to the number of cpu allowed.
+        By default, the analysis is made in parallel using all available
+        cpu. This option can be used in the case of very large character
+        tree that can saturate the RAM if too many parallel processing are
+        active.
+        --prefix=&lt;file&gt;  Prefix of saving .nex or .tnt file. The complete
+        path can be used. By default, the prefix is &#39;agatta_out&#39; and output
+        file is saved in the directory of &lt;file&gt;.
+        --replicates=&lt;int&gt;  State the number of replicates in case
+        of an heuristic tree search. By default the heuristic search is
+        launched with 1000 replicates.
+        --software=&lt;type&gt;  Choose how to perform the three-item analysis.
+        The analysis can be performed using the built-in branch and bound
+        in Agatta (&#39;agatta&#39;). &#39;paup&#39; and &#39;tnt&#39; can be used for branch and
+        bound or heuristic search. &#39;wqfm&#39; and &#39;wtree-qmc&#39; can be used for 
+        heuristic search only. By default the analysis is made using
+        built-in branch and bound. However it works only with very few
+        terminals. User should consider to switch the software is the
+        analysis time appears to be too long. A prefix.nex file is
+        generated if &#39;paup&#39;, a prefix.tnt file for &#39;tnt&#39;, a prefix.wqfm
+        for &#39;wqfm&#39;, and a prefix.wtqmc for &#39;wtree-qmc&#39;.
+        --taxarep1=&lt;path&gt;  If the user wants to replace identifiers by real
+        leaf names in the result files, this flag can be used with a path
+        to a csv file with two columns, the first with the identifiers in
+        the actual newick strings and the other with the names the user
+        wants.
+        --weighting=&lt;type&gt;  Weighting scheme to use on triplets. The
+        type of weighting will change the results of the analysis.
+        The following schemes can be used:
+            - FW: Fractional weighting from Rineau et al. (2021),
+            - FWNL: Fractional weighting from Nelson and Ladiges (1992),
+            - UW: Uniform weighting from Nelson and Ladiges (1992),
+            - MW: Minimal weighting from Wilkinson et al. (2004),
+            - AW: Additive weighting : the weight of a triplet in additive
+              weighting corresponds to the number of trees in which the
+              triplet is present,
+            - NW: No weighting (all triplets have a weight of 1).
+        By default &#39;FW&#39; is used.
+        --repetitions=&lt;type&gt;  The removal of repeated leaves in character
+        trees is made using the method of free-paralogy subtree.
+        Two algorithms are implemented, the original one from Nelson and
+        Ladiges (1996) (&#39;FPS&#39;) for dealing with paralogy in cladistic
+        biogeography, and the algorithm of Rineau et al. (2021) (&#39;TMS&#39;)
+        designed for all cases of repetitions (not only paralogy).
+        If the flag is not used and if repetitions are detected, they are
+        automatically removed using Rineau et al. algorithm&#39;s.
+        The repetition-free character trees are writen in prefix.poly and
+        each new tree receives an id, e.g. 1.2 corresponds to the second
+        repetition-free subtree computed from the 1st original character
+        tree.
+
+Output:
+
+    A triplet matrix file with weights that can be analysed using
+    PAUP* or TNT or a triplet file with weights for WQFM or wTREE-QMC.
+</pre></div>
+</div>
+</section>
+<section id="fp">
+<h2>fp<a class="headerlink" href="#fp" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The free-paralogy analysis is a method used to manage repetitions
+(polymorphism in phylogenetics) in the context of cladistic analysis
+using hierarchical characters. Free-paralogy subtree analysis build
+subtrees to avoid repetition of leaves. Two distinct algorithm for building
+subtrees are currently implemented in Agatta (see --repetitions).
+
+Usage:
+
+    agatta fp &lt;file&gt; [-s -v --prefix=&lt;file&gt; --repetitions=&lt;type&gt;
+                             --taxarep1=&lt;path&gt;]
+
+    Mandatory parameters:
+
+        &lt;file&gt; Path of the file containing the character trees.
+        The trees can be encoded for Agatta in a file in several ways:
+          - a hierarchical matrix,
+          - A newick file with a single newick tree on each line,
+          - A nexus file (extension in .nex),
+          - A nexml file (extension in .nexml).
+        The following url give more information on how to build input
+        files: URL.
+
+    Optionnal parameters:
+
+        -s  Silent mode.
+        -v  Verbose mode.
+        --prefix=&lt;file&gt;  Prefix of all saving files. The complete path can
+        be used. By default, the prefix is &#39;agatta_out&#39; and all files are
+        saved in the directory of the first &lt;file&gt;.
+        --repetitions=&lt;type&gt;  Two algorithms are implemented, the original
+        one from Nelson and Ladiges (1996) (&#39;FPS&#39;) for dealing with
+        paralogy in cladistic biogeography, and the algorithm of
+        Rineau et al. (2021) (&#39;TMS&#39;) designed for all cases of
+        repetitions (not only paralogy).
+        If the flag is not used and if repetitions are detected, they are
+        automatically removed using Rineau et al. algorithm&#39;s.
+        --taxarep1=&lt;path&gt;  If the user wants to replace identifiers by real
+        leaf names in the result files, this flag can be used with a path
+        to a csv file with two columns, the first with the identifiers in
+        the actual newick strings and the other with the names the user
+        wants.
+
+Output:
+
+    One newick file prefix.poly with a list of subtrees free of repeated
+    leaves. Each subtree is labelled with the number of the original tree
+    and the number of the subtree generated from the original tree,
+    e.g. 1.2 corresponds to the second repetition-free subtree computed
+    from the 1st original character tree.
+</pre></div>
+</div>
+</section>
+<section id="consensus">
+<h2>consensus<a class="headerlink" href="#consensus" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Compute a consensus of several equally optimal trees. Two types of
+consensus are available: a strict consensus, that displays only the clades
+common to all trees, and a reduced cladistic consensus (rcc), that displays
+subtrees that are common to all trees (or in other words, the rcc
+generates all triplets common to all optimal trees and combines them
+into the bigest trees).
+
+Usage:
+
+    agatta consensus &lt;file&gt; [-s -v --consensus=&lt;type&gt; --prefix=&lt;file&gt;
+                                   --taxarep1=&lt;path&gt;]
+    Mandatory parameters:
+
+        &lt;file&gt; Path of the file containing the equally optimal trees.
+        The trees can be encoded for Agatta in a file in several ways:
+          - a hierarchical matrix,
+          - A newick file with a single newick tree on each line,
+          - A nexus file (extension in .nex),
+          - A nexml file (extension in .nexml).
+        The following url give more information on how to build input
+        files: URL.
+
+    Optionnal parameters:
+
+        -s  Silent mode.
+        -v  Verbose mode.
+        --consensus=&lt;type&gt;  Compute a consensus which can be a strict
+        consensus (&#39;strict&#39;) or a reduced cladistic consensus (&#39;rcc&#39;,
+        Wilkinson 1994) which is able to detect more common information
+        in subtrees. By default, the flag without argument produces a
+        strict consensus.
+        --prefix=&lt;file&gt;  Prefix of all saving files. The complete path can
+        be used. By default, the prefix is &#39;agatta_out&#39; and all files are
+        saved in the directory of the first &lt;file&gt;.
+        --taxarep1=&lt;path&gt;  If the user wants to replace identifiers by real
+        leaf names in the result files, this flag can be used with a path
+        to a csv file with two columns, the first with the identifiers in
+        the actual newick strings and the other with the names the user
+        wants.
+
+Output:
+
+    One newick file containing the strict consensus prefix.constrict or
+    a list of common subtrees (the rcc profile) prefix.rcc.
+</pre></div>
+</div>
+</section>
+<section id="support">
+<h2>Support<a class="headerlink" href="#support" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The support command gathers several triplet metrics and indices that are
+intended to compare trees between them. The retention index measures the
+amount of cladistic relationships from the input characters retained in
+the optimal cladogram (or a consensus). The triplet distance measures
+the distance in terms of triplets between two trees. The ITRI compares
+in terms of triplets a tree relatively to a reference tree (used to
+measure efficiency of methods using simulations).
+All these metrics handle weighting schemes.
+
+Usage:
+
+    agatta support &lt;file&gt; &lt;file&gt; [-s -v --index=&lt;type&gt; --prefix=&lt;file&gt;
+                                   --taxarep1=&lt;path&gt; --taxarep2=&lt;path&gt;
+                                   --weighting=&lt;type&gt; --repetitions=&lt;type&gt;]
+
+    Mandatory parameters:
+
+        Two &lt;file&gt; arguments are requested which represents the path of
+        tree files. Both &lt;file&gt; must contain newick tree(s) (excepted in
+        ri mode, see below).
+        The trees can be stored in newick files, nexus files (.nex), or
+        nexml files (.nexml). Hierarchical matrices are not handled by the
+        support command.
+        The requested files depend of the --index flag:
+            --index=ri: the retention index compares the cladogram to its
+            characters. The first &lt;file&gt; contains one tree considered as
+            the optimal cladogram (or a consensus); the second &lt;file&gt;
+            contains the input character trees used to construct the
+            cladogram and can be a newick file or a hierarchical matrix.
+            --index=tripdistance: compute various measures for comparison 
+            between two trees t1 and t2. Can be used in simulation 
+            studies to compare a reconstructed tree to a true tree.
+
+    Optionnal parameters:
+
+        -s  Silent mode.
+        -v  Verbose mode.
+        --index  The index flag specifies which measure to use to compare
+        rooted trees between retention index (&#39;ri&#39;), or inter-tree 
+        retention index/triplet distance (&#39;tripdistance&#39;). More 
+        informations on the input file in the mandatory parameters section.
+        --taxarep1=&lt;path&gt;  If the user wants to replace identifiers by real
+        leaf names in the result files, this flag can be used with a path
+        to a csv file with two columns, the first with the identifiers in
+        the actual newick strings and the other with the names the user
+        wants.
+        --taxarep2=&lt;path&gt;  Idem as --taxarep1 for the second &lt;file&gt;.
+        --weighting=&lt;type&gt;  Weighting scheme to use on triplets. The
+        type of weighting will change the results of the analysis.
+        The following schemes can be used:
+            - FW: Fractional weighting from Rineau et al. (2021),
+            - FWNL: Fractional weighting from Nelson and Ladiges (1992),
+            - UW: Uniform weighting from Nelson and Ladiges (1992),
+            - MW: Minimal weighting from Wilkinson et al. (2004),
+            - AW: Additive weighting : the weight of a triplet in additive
+              weighting corresponds to the number of trees in which the
+              triplet is present,
+            - NW: No weighting (all triplets have a weight of 1).
+        By default &#39;FW&#39; is used.
+        --repetitions=&lt;type&gt; The removal of repeated leaves in character
+        trees is made using the method of free-paralogy subtree.
+        Two algorithms are implemented, the original one from Nelson and
+        Ladiges (1996) (&#39;FPS&#39;) for dealing with paralogy in cladistic
+        biogeography, and the algorithm of Rineau et al. (2021) (&#39;TMS&#39;)
+        designed for all cases of repetitions (not only paralogy).
+        If the flag is not used and if repetitions are detected, they are
+        automatically removed using Rineau et al. algorithm&#39;s.
+        The repetition-free character trees are writen in prefix.poly and
+        each new tree receives an id, e.g. 1.2 corresponds to the second
+        repetition-free subtree computed from the 1st original character
+        tree. 
+
+Output:
+
+    One ouput file is writen the results of the tree comparisons:
+        - For ri, a global retention index stating the overall information
+        content of all character trees retained in the cladogram is writen,
+        plus a ri for each character, a ri for each character state, and a 
+        ri for each subtree if polymorphism allowing to cut tcharacter 
+        trees in subtrees present.
+        - For tripdistance, several values are computed given two trees t1 
+        (or reference/true tree) and t2 (or reconstructed tree) (&#39;number of 
+        triplets&#39; can refer to a sum of triplet weights depending of the
+        weighting scheme chosen). The interpetation differs if one wants to 
+        compare two equal topologies or if the comparison involves a 
+        reference tree and a tree to be compared with (in this case, the 
+        significance is added in parentheses):
+            
+            * Number of triplets in t1 (relevant elements)
+            
+            * Number of triplets in t2 (retreived elements)
+            
+            * Number of triplets both in t1 and t2 (true positives)
+              Note that t1 triplets present in t2 and t2 triplets also in 
+              t1 may differ because of the weighting)
+        
+            * Number of triplets in t2 but not in t1 (false positives) 
+            
+            * Number of triplets in t1 but not in t2 (false negatives) 
+            
+            * ITRI(t1,t2) (Precision: (t2 triplets present in t1)/t2) 
+              amount of triplets from the reconstructed tree that are true.) 
+        
+            * ITRI(t2,t1) (Recall: (t1 triplets present in t2)/t1) amount 
+              of true triplets that are present in the reconstructed tree) 
+        
+            * Triplet distance (F1-score: harmonic mean of precision and 
+              recall (2 * Precision * Recall) / (Precision + Recall))
+
+    All calculations are made using a specific weighting scheme
+    (option --weighting).
+</pre></div>
+</div>
+</section>
+<section id="chartest">
+<h2>Chartest<a class="headerlink" href="#chartest" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The chartest command is intended to use the character state testing
+procedure for hierarchical characters. Each character state
+(an informative node in a rooted tree) is tested against a cladogram:
+if the test fails, the character state hypothesis (an hypothesis of clade)
+is rejected, and the state becomes homoplasic; otherwise, if the state pass
+the test, it becomes a synapomorphy that supports a specific node of the
+cladogram.
+
+This method has been set up to avoid the problems of parsimony
+
+Usage:
+
+    agatta chartest &lt;file&gt; &lt;file&gt; [-s -v --pdf --prefix=&lt;file&gt; 
+                                   --taxarep1=&lt;path&gt; --taxarep2=&lt;path&gt; 
+                                   --repetitions=&lt;type&gt;]
+
+    Mandatory parameters:
+
+        &lt;file&gt; Path of files containing the character trees.
+        The trees can be encoded for Agatta in a file in several ways:
+          - a hierarchical matrix,
+          - A newick file with a single newick tree on each line,
+          - A nexus file (extension in .nex),
+          - A nexml file (extension in .nexml).
+        The following url give more information on how to build input
+        files: URL.
+        The first &lt;file&gt; contains only one tree: the optimal cladogram or
+        the consensus tree resulting from the analysis of a set of
+        character trees. The second &lt;file&gt; contains the set of character
+        trees.
+
+    Optionnal parameters:
+
+        -s  Silent mode.
+        -v  Verbose mode.
+        --pdf  Compute a pdf file to visualise character states on
+        the cladogram if --chartest is used. One page for each state is
+        writen. The file is named prefix.pdf.
+        --prefix=&lt;file&gt;  Prefix of all saving files. The complete path can
+        be used. By default, the prefix is &#39;agatta_out&#39; and all files are
+        saved in the directory of the first &lt;file&gt;.
+        --taxarep1=&lt;path&gt;  If the user wants to replace identifiers by real
+        leaf names in the result files, this flag can be used with a path
+        to a csv file with two columns, the first with the identifiers in
+        the actual newick strings and the other with the names the user
+        wants.
+        --taxarep2=&lt;path&gt;  Idem as --taxarep1 for the second &lt;file&gt;.
+        --repetitions=&lt;type&gt;  The removal of repeated leaves in character
+        trees is made using the method of free-paralogy subtree.
+        Two algorithms are implemented, the original one from Nelson and
+        Ladiges (1996) (&#39;FPS&#39;) for dealing with paralogy in cladistic
+        biogeography, and the algorithm of Rineau et al. (2021) (&#39;TMS&#39;)
+        designed for all cases of repetitions (not only paralogy).
+        If the flag is not used and if repetitions are detected, they are
+        automatically removed using Rineau et al. algorithm&#39;s.
+        The repetition-free character trees are writen in prefix.poly and
+        each new tree receives an id, e.g. 1.2 corresponds to the second
+        repetition-free subtree computed from the 1st original character
+        tree.
+Output:
+
+    Two output files are writen: prefix.chartest gives all locations
+    of the states on the cladogram and if the test is passed or not,
+    sorted by state, and prefix.chartest_node gives the same
+    information sorted by node. For better visualisation, the flag --pdf
+    allow to generate a pdf file with a page for each character state with
+    the resulting location and results.
+</pre></div>
+</div>
+</section>
+<section id="describetree">
+<h2>describetree<a class="headerlink" href="#describetree" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The describetree command output basic informations on a list of
+rooted trees. The informations writen are related to the number of
+nodes, terminals, internal nodes, symmetric nodes, apical nodes, to the
+sesolution of the tree, number of dichotomies, polytomies.
+
+Usage:
+
+    agatta describetree &lt;file&gt; [-s -v --prefix=&lt;file&gt; --showtaxanames]
+
+    Mandatory parameters:
+
+        &lt;file&gt; Path of the file containing rooted trees.
+        The trees can be encoded for Agatta in a file in several ways:
+          - a hierarchical matrix,
+          - A newick file with a single newick tree on each line,
+          - A nexus file (extension in .nex),
+          - A nexml file (extension in .nexml).
+        THe following url give more information on how to build input
+        files: URL.
+
+    Optionnal parameters:
+
+        -s  Silent mode.
+        -v  Verbose mode.
+        --prefix=&lt;file&gt;  Prefix of the saving file. The complete path can
+        be used. By default, the prefix is &#39;agatta_out&#39; and all files are
+        saved in the directory of the first &lt;file&gt;.
+        --showtaxanames  The list of all tree leaves is writen in the
+        output file.
+
+Output:
+
+    One output file prefix.dt with descriptors for each tree.
+</pre></div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="references">
+<h1>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Cao, N. (2008). Analyse à trois éléments et anatomie du bois des Fagales Engl (Doctoral dissertation, Paris, Muséum national d’histoire naturelle).</p></li>
+</ul>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Output%20files.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Output files</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Functions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis">Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hmatrix">hmatrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tripdec">Tripdec</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#standardisation">Standardisation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convert">Convert</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fp">fp</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#consensus">consensus</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#support">Support</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chartest">Chartest</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#describetree">describetree</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Valentin Rineau
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

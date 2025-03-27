@@ -14,7 +14,7 @@ Before starting this tutorial, please download all [datasets](https://github.com
 
 The tutorial requires the installation of the following programs:
 * PAUP* (part 'command-line binaries' for Linux et MacOS): https://paup.phylosolutions.com/get-paup/
-* Python 3.7 or upper: https://www.python.org/downloads/. Beginner tip: make sure that python can be called directly from the command prompt, so that you don't have to write the whole path from the python executable every time you want to run a command. This can be made by ticking the box '[Add Python 3 to PATH](https://miro.medium.com/max/1344/0*7nOyowsPsGI19pZT.png)' when installing Python 3 for the first time. If the 'pip' and 'python' commands doesn't work, reinstall python and tick the checkbox.
+* Python 3.8 to 3.11: https://www.python.org/downloads/. Beginner tip: make sure that python can be called directly from the command prompt, so that you don't have to write the whole path from the python executable every time you want to run a command. This can be made by ticking the box '[Add Python 3 to PATH](https://miro.medium.com/max/1344/0*7nOyowsPsGI19pZT.png)' when installing Python 3 for the first time. If the 'pip' and 'python' commands doesn't work, reinstall python and tick the checkbox.
 
 ### Installation
 

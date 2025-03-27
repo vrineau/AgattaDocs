@@ -1,0 +1,781 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Input files &#8212; AgattaDocs</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Input files';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Output files" href="Output%20files.html" />
+    <link rel="prev" title="Tutorial" href="Tutorial.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/agatta.png" class="logo__image only-light" alt="AgattaDocs - Home"/>
+    <img src="_static/agatta.png" class="logo__image only-dark pst-js-only" alt="AgattaDocs - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction to Agatta
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Tutorial.html">Tutorial</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Input files</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="Output%20files.html">Output files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Functions.html">Functions</a></li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="hhttps://github.com/vrineau/AgattaDocs" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="hhttps://github.com/vrineau/AgattaDocs/issues/new?title=Issue%20on%20page%20%2FInput files.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Input files.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Input files</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Input files</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hierarchical-matrix">Hierarchical matrix</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-de-la-matrice">Structure de la matrice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ancestral-derived-states-criteria">Ancestral/derived states: criteria</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-state-characters">Multi-state characters</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polymorphism-missing-and-inapplicable-data">Polymorphism, missing and inapplicable data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-formatting">File formatting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newick-file">Newick file</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="input-files">
+<h1>Input files<a class="headerlink" href="#input-files" title="Link to this heading">#</a></h1>
+<p>Deux formats de fichiers sont acceptés par Agatta afin de réaliser une analyse cladistique. Les caractères peuvent être codés sous la forme d’une matrice taxons/caractères appelée hierarchical matrix, ou bien peuvent être directement codés sous la forme d’une liste d’arbres en format newick. Le principe fondamental de la three-item analysis étant de coder les caractères sous la forme d’arbres hiérarchiques, de les décomposer en three-item statements puis de les recomposer afin de trouver l’arbre optimal (celui qui maximise le nombre de three-item statements), les deux représentations sont équivalentes. Les hierarchical matrix correspondent à l’usage classique des matrices taxons/caractères en cladistique. Les arbres en format newick seront quant à eux généralement plus utilisés pour coder des arbres de gènes obtenus par d’autres analyses comme des caractères en three-item analysis.</p>
+<section id="hierarchical-matrix">
+<h2>Hierarchical matrix<a class="headerlink" href="#hierarchical-matrix" title="Link to this heading">#</a></h2>
+<section id="structure-de-la-matrice">
+<h3>Structure de la matrice<a class="headerlink" href="#structure-de-la-matrice" title="Link to this heading">#</a></h3>
+<p>L’utilisation des hierarchical matrix à été proposée pour la première fois par Cao et al. (2007). L’exemple ci-dessous est une partie du fichier exemple disponible <a class="reference external" href="https://github.com/vrineau/Agatta/blob/main/data/gill_morpho.hmatrix">ici</a>. Il s’agit d’une matrice reprise de Gill et Leis (2019) traitée par analyse à trois éléments.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>(0,(1))</p></th>
+<th class="head"><p>(0,(1))</p></th>
+<th class="head"><p>(0,(1))</p></th>
+<th class="head"><p>(0,(1))</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Lobotes</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Datnioides</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>Hapalogenys</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Chaetodontidae</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>Pomacanthidae</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Drepaneidae</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>La première colonne correspond aux OTU (operationnal taxonomic units) de l’échantillonage taxonomique choisi par l’utilisateur. Tous les symboles sont acceptés excepté le point virgule.</p>
+<p>Chaque colonne suivante correspond à un caractère, le chiffre de chaque cellule représentant l’état de caractère associé à l’OTU. Par exemple, <em>Lobotes</em> possède l’état 0 pour le caractère de la première colonne.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>(0,(1))</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Lobotes</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>La première ligne correspond à la structure de chaque caractère de la matrice. Les caractères étant designés de manière hiérarchique, cette structure est représentée sous la forme d’un format newick (sans le point virgule final) représentant l’agencement entre les différents états de caractères. Tous les états de caractères de la colonne doivent être présents dans la structure, et uniquement eux.</p>
+<p>Prenons l’exemple du premier caractère, codé <code class="docutils literal notranslate"><span class="pre">(0,(1))</span></code>. Il s’agit d’un caractère binaire présentant les états 0 et 1. Ici, 0 est l’état racine. Il s’agit de l’état ancestral. L’état 1 étant inclus dans 0, cela indique que 1 dérive de 0. L’état 1 est donc l’état dérivé. Il indique que Chaetodontidae, Pomacanthidae et Drepaneidae se regroupent ensemble par rapport à Lobotes, Datnioides, et Hapalogenys. Le caractère 1 correspond à l’hypothèse cladistique suivante:</p>
+<p><code class="docutils literal notranslate"><span class="pre">(Lobotes,</span> <span class="pre">Datnioides,</span> <span class="pre">Hapalogenys,(Chaetodontidae,</span> <span class="pre">Pomacanthidae,</span> <span class="pre">Drepaneidae)</span></code></p>
+</section>
+<section id="ancestral-derived-states-criteria">
+<h3>Ancestral/derived states: criteria<a class="headerlink" href="#ancestral-derived-states-criteria" title="Link to this heading">#</a></h3>
+<p>C’est à l’utilisateur de renseigner pour chaque caractère quel est l’état ancestral et quel est l’état dérivé. Généralement, le choix se fait selon un critère extra-groupe.</p>
+<p>Ce choix peut être fait pour l’ensemble des caractères en choisissant un taxon qui serait considéré comme l’extra-groupe. Cependant, le format hmatrix permet également de définir les états ancestraux caractère par caractère si l’utilisateur le souhaite.</p>
+<p>Chaque caractère étant indépendant, l’utilisateur peut par exemple considérer que pour le caractère 1, un taxon donné puisse être choisi comme extra-groupe, mais qu’un autre taxon soit choisi comme extra-groupe pour le caractère 2.</p>
+<p>Etant donné cette manière de coder, il n’est pas du tout obligatoire que les taxons extra-groupes soient inclus dans l’échantillonage. Ils peuvent être inclus si l’utilisateur souhaite tester la monophylie de l’ingroup.</p>
+<blockquote>
+<div><p>Les arbres optimaux obtenus par analyse à trois éléments sont dichotomique et ne possèdent pas de trichotomie basale, la trichotomie basale étant un artefact lié à l’enracinement a posteriori d’un arbre non enraciné. Les caractères étant hiérarchiques, ils sont des arbres enracinés, et leur analyse produit directement un cladogramme enraciné.</p>
+</div></blockquote>
+<p>De plus, il est possible de panacher les critères, la décision revenant à l’utilisateur qui dispose de la connaissance systématique de son groupe pour choisir quel est le critère pertinent pour chaque caractère. Il est par exemple possible de choisir un critère extra-groupe pour certains caractères, et un critère ontogénétique pour d’autres. Dans tout les cas, Agatta permet toutes les possibilités de codage hiérarchique.</p>
+</section>
+<section id="multi-state-characters">
+<h3>Multi-state characters<a class="headerlink" href="#multi-state-characters" title="Link to this heading">#</a></h3>
+<p>Nous avons présenté le cas le plus simple des caractères à deux états. Cependant, Agatta permet pour chaque caractère de coder autant d’états que souhaité. Dans le cas d’un caractère à plus de deux états, la logique reste la même. Par exemple, on pourrait décider que le premier caractère présente également un état 2 qui dérive de l’état 1:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>(0,(1,(2)))</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Lobotes</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Datnioides</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>Hapalogenys</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Chaetodontidae</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>Pomacanthidae</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Drepaneidae</p></td>
+<td><p>2</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Ce qui permet de postuler l’existence d’un clade supplémentaire:</p>
+<p><code class="docutils literal notranslate"><span class="pre">(Lobotes,</span> <span class="pre">Datnioides,</span> <span class="pre">Hapalogenys,(Chaetodontidae,</span> <span class="pre">(Pomacanthidae,</span> <span class="pre">Drepaneidae))</span></code></p>
+<p>Pour qu’un caractère soit informatif en analyse à trois éléments, il suffit au minimum qu’un OTU dispose de l’état ancestral et que deux OTU disposent de l’état dérivé, saying que two taxa are more closely related to each other than any is to a third.</p>
+<p>Il est également possible de décider que l’état 2 n’est finalement pas issu de l’état 1:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>(0,(1),(2))</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Lobotes</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Datnioides</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>Hapalogenys</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Chaetodontidae</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>Pomacanthidae</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Drepaneidae</p></td>
+<td><p>2</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Ce qui implique en changeant l’état de Chaetodontidae pour que l’état 1 reste informatif :</p>
+<p><code class="docutils literal notranslate"><span class="pre">(Lobotes,</span> <span class="pre">Datnioides,</span> <span class="pre">(Hapalogenys,Chaetodontidae),</span> <span class="pre">(Pomacanthidae,</span> <span class="pre">Drepaneidae))</span></code></p>
+<p>Voir également Faure-Brac et al. (2020) pour un autre cas concret de codage en hiérarchie.</p>
+</section>
+</section>
+<section id="polymorphism-missing-and-inapplicable-data">
+<h2>Polymorphism, missing and inapplicable data<a class="headerlink" href="#polymorphism-missing-and-inapplicable-data" title="Link to this heading">#</a></h2>
+<p>Le format hmatrix permet un traitement différencié du polymorphisme, des données non-applicables et des missing data (Zaragüeta Bagils and Bourdon 2007).</p>
+<p>Dans le cas du polymorphisme, les états de caractères doivent être renseignés en les séparant par une virgule:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>(0,(1))</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Lobotes</p></td>
+<td><p>0,1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Le polymorphisme est ensuite traité selon la méthode de free-paralogy subtree analysis (Nelson and Ladiges 1996). Par défaut, l’algorithme TMS de Rineau et al (2022) est utilisé pour réalisé la free-paralogy en conservant le maximum d’information cladistique.</p>
+<p>Dans le cas des missing data, il faut mettre un point d’interrogation pour indiquer que l’état est inconnu:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>(0,(1))</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Lobotes</p></td>
+<td><p>?</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Dans ce cas, <em>Lobotes</em> ne participe pas au caractère et ne génèrera par de three-item statements.</p>
+<p>Enfin, les données non-applicables impliquent qu’aucun état de caractère n’est satisfaisant. Dans ce cas, nous conseillons de suivre la procédure de Zaragueta and Bourdon (2007) et de coder le non-applicable comme l’état racine (ici 0). En effet, pour un caractère hiérarchique, l’état racine ne doit pas nécessairement être défini, l’état racine correspondant simplement à la racine de l’hypothèse phylogénétique. Puisque le non-applicable implique qu’aucun état dérivé ne correspond, alors l’OTU doit être branché à la racine Contrairement à la missing data, le non-applicable est une information positive, ce codage permet donc de traduire cette connaissance positive en three-item statements.</p>
+</section>
+<section id="file-formatting">
+<h2>File formatting<a class="headerlink" href="#file-formatting" title="Link to this heading">#</a></h2>
+<p>Le fichier hierarchical matrix doit obligatoirement être en format csv. Vous pouvez directement créer une matrice hiérarchique sur excel puis sauvegarder le fichier en csv.</p>
+<p><img alt="image" src="https://hackmd.io/_uploads/ryuo3Ot3Je.png" /></p>
+<p>Les virgules n’étant pas admises comme séparateurs, celles-ci étant utilisées pour représenter le polymorphisme, nous conseillons d’utiliser le point virgule comme séparateur. Si vous utilisez excel, enregistrez le fichier en choisissant le format <strong>CSV: (séparateur: point-virgule) (*.csv)</strong>. En ouvrant le fichier avec un éditeur de texte, on obtient:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>;(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1,(2)));(0,(1,(2)));(0,(1,(2)));(0,(1,(2)));(0,(1));(0,(1,(2)));(0,(1,(2)));(0,(1));(0,(1));(0,(1,(2)));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1))
+Lobotes;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;1;1;1;1;0;0;0
+Datnioides;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;?;1;1;1;0;0;0
+Hapalogenys;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;1;1;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;1;1;1;1;0;0;0
+Chaetodontidae;1;1;1;0;0;0;0;2;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;1;1;1;1;0;1;0;1;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;0;0
+Pomacanthidae;1;0;1;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;1;0;0;0;0;0;0;0;0;1;1;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+Drepaneidae;1;1;1;0;0;0;0;2;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;1;1;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+Ephippidae;1;1;0;1;1;1;1;2;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+Leiognathidae;1;1;0;1;1;0;0;2;0;1;0;0;0;1;1;0;0;0;0;0;0;0;0;1;1;0;0;0;0;0;0;1;1;1;1;1;1;0;1;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+Scatophagidae;1;1;0;1;1;1;1;2;1;1;1;1;0;0;1;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;1;1;1;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;1;1;0;0;0
+Antigonia;1;1;0;1;1;1;0;0;2;1;2;0;1;0;2;1;0;0;0;0;0;0;0;1;1;0;0;0;1;0;0;0;1;1;1;1;1;1;0;0;0;0;0;1;1;1;1;0;0;1;0;0;1;1;0;0;0;0;0;1;0;0;0
+Capros;1;0;0;1;1;0;0;0;2;1;2;0;1;0;1;1;0;0;1;0;0;0;1;?;1;0;0;0;1;0;1;0;1;1;1;0;1;1;0;0;1;0;1;1;1;1;1;1;0;1;0;1;1;1;0;0;1;0;0;1;1;1;0
+Siganidae;1;1;0;1;1;2;2;2;1;1;0;1;1;1;1;1;1;1;1;1;0;0;0;0;1;0;0;0;0;0;1;1;1;1;1;0;1;1;0;0;1;1;1;1;1;1;1;1;0;0;0;0;0;0;0;0;1;0;0;0;0;0;1
+Luvaridae;1;1;0;0;0;1;2;2;2;1;1;0;1;1;2;1;1;1;1;0;1;1;1;1;0;0;1;0;1;1;0;1;1;1;1;1;1;0;0;0;0;1;1;1;1;1;1;0;1;1;1;1;1;1;0;0;1;0;0;0;1;0;0
+Zanclidae;1;1;0;1;1;2;2;2;2;1;1;0;1;1;2;1;1;0;0;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;0;1;0;0;1;0;0;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;0;0;0;1;0;0
+Acanthuridae;1;1;0;1;1;2;2;2;2;1;1;0;1;1;2;1;1;1;1;1;1;1;1;?;1;1;1;1;1;1;1;1;1;1;1;0;1;0;0;1;0;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;0;0;0;0;1;1
+</pre></div>
+</div>
+<p>Une fois sauvegardé dans le bon format, vérifier l’extension du fichier. <strong>Pour qu’Agatta reconnaisse automatiquement qu’il s’agit d’une hierarchical matrix, vous devez modifier l’extension .csv en <code class="docutils literal notranslate"><span class="pre">.hmatrix</span></code>.</strong></p>
+<p>Il est également possible avec Agatta d’analyser plusieurs hierarchical matrices combinées dans une seule analyse cladistique. Dans ce cas, il suffit de donner les noms des fichiers les uns à la suite des autres</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">agatta</span> <span class="n">analysis</span> <span class="n">file1</span><span class="o">.</span><span class="n">hmatrix</span> <span class="n">file2</span><span class="o">.</span><span class="n">hmatrix</span> <span class="o">...</span>
+</pre></div>
+</div>
+</section>
+<section id="newick-file">
+<h2>Newick file<a class="headerlink" href="#newick-file" title="Link to this heading">#</a></h2>
+<p>Le format newick est le second format lisible par Agatta. Les arbres que l’on souhaite analyser doivent nécessairement être <strong>enracinés</strong>. Le fichier newick ne doit contenir que la liste des arbres, chaque ligne du fichier correspondant à un arbre. Le fichier exemple ici est celui de Song et al. (2012) disponible <a class="reference external" href="https://github.com/vrineau/Agatta/blob/main/data/song_gen.txt">ici</a>.
+<a class="github reference external" href="https://github.com/vrineau/Agatta/blob/main/data/song_gen.txt">vrineau/Agatta</a></p>
+<p>Voici les dix premières lignes du fichier:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">Chicken</span><span class="p">:</span><span class="mf">0.131279775345</span><span class="p">,(((((((</span><span class="n">Marmoset</span><span class="p">:</span><span class="mf">0.0204923957271</span><span class="p">,((</span><span class="n">Orangutan</span><span class="p">:</span><span class="mf">0.00584046083478</span><span class="p">,((</span><span class="n">Human</span><span class="p">:</span><span class="mf">0.00233080025572</span><span class="p">,</span><span class="n">Chimpanzee</span><span class="p">:</span><span class="mf">0.00254878680241</span><span class="p">):</span><span class="mf">0.000769089390244</span><span class="p">,</span><span class="n">Gorilla</span><span class="p">:</span><span class="mf">0.00176992228314</span><span class="p">):</span><span class="mf">0.00288531375061</span><span class="p">):</span><span class="mf">0.00467903448512</span><span class="p">,</span><span class="n">Macaque</span><span class="p">:</span><span class="mf">0.00908469530327</span><span class="p">):</span><span class="mf">0.00734594094106</span><span class="p">):</span><span class="mf">0.0296837843809</span><span class="p">,(</span><span class="n">Galagos</span><span class="p">:</span><span class="mf">0.0600055740335</span><span class="p">,</span><span class="n">Mouse_Lemur</span><span class="p">:</span><span class="mf">0.0694590103929</span><span class="p">):</span><span class="mf">0.0196895108756</span><span class="p">):</span><span class="mf">0.0085007567437</span><span class="p">,(</span><span class="n">Tree_Shrew</span><span class="p">:</span><span class="mf">0.0534460635684</span><span class="p">,((((</span><span class="n">Mouse</span><span class="p">:</span><span class="mf">0.0349199386903</span><span class="p">,</span><span class="n">Rat</span><span class="p">:</span><span class="mf">0.0345660857178</span><span class="p">):</span><span class="mf">0.0897288064714</span><span class="p">,</span><span class="n">Kangaroo_Rat</span><span class="p">:</span><span class="mf">0.0649361322722</span><span class="p">):</span><span class="mf">0.00930431451076</span><span class="p">,(</span><span class="n">Guinea_Pig</span><span class="p">:</span><span class="mf">0.0711517239764</span><span class="p">,</span><span class="n">Squirrel</span><span class="p">:</span><span class="mf">0.0481034437826</span><span class="p">):</span><span class="mf">0.00498901022113</span><span class="p">):</span><span class="mf">0.00991061551553</span><span class="p">,(</span><span class="n">Tarsier</span><span class="p">:</span><span class="mf">0.217182450829</span><span class="p">,(</span><span class="n">Rabbit</span><span class="p">:</span><span class="mf">0.0631257980439</span><span class="p">,</span><span class="n">Pika</span><span class="p">:</span><span class="mf">0.087313728905</span><span class="p">):</span><span class="mf">0.0291647109858</span><span class="p">):</span><span class="mf">0.0339406584933</span><span class="p">):</span><span class="mf">0.0030207288372</span><span class="p">):</span><span class="mf">0.00372275015446</span><span class="p">):</span><span class="mf">0.00872816165234</span><span class="p">,((((</span><span class="n">Microbat</span><span class="p">:</span><span class="mf">0.0696356706177</span><span class="p">,</span><span class="n">Megabat</span><span class="p">:</span><span class="mf">0.0390727680795</span><span class="p">):</span><span class="mf">0.0086854921458</span><span class="p">,(</span><span class="n">Horse</span><span class="p">:</span><span class="mf">0.0461656721413</span><span class="p">,((</span><span class="n">Dolphin</span><span class="p">:</span><span class="mf">0.0272954336484</span><span class="p">,</span><span class="n">Cow</span><span class="p">:</span><span class="mf">0.0443204506945</span><span class="p">):</span><span class="mf">0.0116990944027</span><span class="p">,(</span><span class="n">Alpaca</span><span class="p">:</span><span class="mf">0.051306106068</span><span class="p">,</span><span class="n">Pig</span><span class="p">:</span><span class="mf">0.046407562946</span><span class="p">):</span><span class="mf">0.00563985340054</span><span class="p">):</span><span class="mf">0.0247170466469</span><span class="p">):</span><span class="mf">0.00304339918494</span><span class="p">):</span><span class="mf">0.00358264486119</span><span class="p">,(</span><span class="n">Dog</span><span class="p">:</span><span class="mf">0.0580489915606</span><span class="p">,</span><span class="n">Cat</span><span class="p">:</span><span class="mf">0.0519621580488</span><span class="p">):</span><span class="mf">0.0244766206527</span><span class="p">):</span><span class="mf">0.00494622940371</span><span class="p">,(</span><span class="n">Shrew</span><span class="p">:</span><span class="mf">0.0804342808451</span><span class="p">,</span><span class="n">Hedgehog</span><span class="p">:</span><span class="mf">0.139409366682</span><span class="p">):</span><span class="mf">0.0210030742124</span><span class="p">):</span><span class="mf">0.0130522958142</span><span class="p">):</span><span class="mf">0.00809030960191</span><span class="p">,((</span><span class="n">Lesser_Hedgehog_Tenrec</span><span class="p">:</span><span class="mf">0.156305507638</span><span class="p">,(</span><span class="n">Hyrax</span><span class="p">:</span><span class="mf">0.064198126165</span><span class="p">,</span><span class="n">Elephant</span><span class="p">:</span><span class="mf">0.0292820820713</span><span class="p">):</span><span class="mf">0.00798950914849</span><span class="p">):</span><span class="mf">0.0213905471889</span><span class="p">,(</span><span class="n">Sloth</span><span class="p">:</span><span class="mf">0.0383674324752</span><span class="p">,</span><span class="n">Armadillos</span><span class="p">:</span><span class="mf">0.0398080414024</span><span class="p">):</span><span class="mf">0.0192051567243</span><span class="p">):</span><span class="mf">0.00316664009477</span><span class="p">):</span><span class="mf">0.054936328385</span><span class="p">,</span><span class="n">Platypus</span><span class="p">:</span><span class="mf">0.599083136441</span><span class="p">):</span><span class="mf">0.0419332947834</span><span class="p">,(</span><span class="n">Opossum</span><span class="p">:</span><span class="mf">0.0426931845392</span><span class="p">,</span><span class="n">Wallaby</span><span class="p">:</span><span class="mf">0.0489905851887</span><span class="p">):</span><span class="mf">0.0753994602564</span><span class="p">):</span><span class="mf">0.131279775345</span><span class="p">);</span>
+<span class="p">(</span><span class="n">Chicken</span><span class="p">:</span><span class="mf">0.13184348409</span><span class="p">,(((</span><span class="n">Wallaby</span><span class="p">:</span><span class="mf">0.0403884889125</span><span class="p">,</span><span class="n">Opossum</span><span class="p">:</span><span class="mf">0.0424549058291</span><span class="p">):</span><span class="mf">0.0623712854935</span><span class="p">,</span><span class="n">Platypus</span><span class="p">:</span><span class="mf">0.106934421683</span><span class="p">):</span><span class="mf">0.0265468149082</span><span class="p">,(((</span><span class="n">Lesser_Hedgehog_Tenrec</span><span class="p">:</span><span class="mf">0.0763243234611</span><span class="p">,(</span><span class="n">Hyrax</span><span class="p">:</span><span class="mf">0.0439837309698</span><span class="p">,</span><span class="n">Elephant</span><span class="p">:</span><span class="mf">0.0154182537039</span><span class="p">):</span><span class="mf">0.00814539614046</span><span class="p">):</span><span class="mf">0.00927252801896</span><span class="p">,(((((</span><span class="n">Cow</span><span class="p">:</span><span class="mf">0.0253768995556</span><span class="p">,(</span><span class="n">Dolphin</span><span class="p">:</span><span class="mf">0.0137381500408</span><span class="p">,</span><span class="n">Pig</span><span class="p">:</span><span class="mf">0.0515071568701</span><span class="p">):</span><span class="mf">0.00214247375384</span><span class="p">):</span><span class="mf">0.00369849062439</span><span class="p">,</span><span class="n">Alpaca</span><span class="p">:</span><span class="mf">0.0327041327444</span><span class="p">):</span><span class="mf">0.0129939134522</span><span class="p">,((</span><span class="n">Microbat</span><span class="p">:</span><span class="mf">0.0488318249748</span><span class="p">,(</span><span class="n">Dog</span><span class="p">:</span><span class="mf">0.0251914464999</span><span class="p">,</span><span class="n">Cat</span><span class="p">:</span><span class="mf">0.019077962803</span><span class="p">):</span><span class="mf">0.0156030468259</span><span class="p">):</span><span class="mf">0.00191908404652</span><span class="p">,</span><span class="n">Horse</span><span class="p">:</span><span class="mf">0.031403746682</span><span class="p">):</span><span class="mf">0.00190573500035</span><span class="p">):</span><span class="mf">0.000789098343179</span><span class="p">,(</span><span class="n">Megabat</span><span class="p">:</span><span class="mf">0.0306925352959</span><span class="p">,(</span><span class="n">Hedgehog</span><span class="p">:</span><span class="mf">0.0955938274852</span><span class="p">,</span><span class="n">Shrew</span><span class="p">:</span><span class="mf">0.109121497038</span><span class="p">):</span><span class="mf">0.0170079661056</span><span class="p">):</span><span class="mf">0.00357223557112</span><span class="p">):</span><span class="mf">0.00782417078979</span><span class="p">,(((</span><span class="n">Pika</span><span class="p">:</span><span class="mf">0.0525511270699</span><span class="p">,</span><span class="n">Rabbit</span><span class="p">:</span><span class="mf">0.0390937774654</span><span class="p">):</span><span class="mf">0.0249464279599</span><span class="p">,(((</span><span class="n">Rat</span><span class="p">:</span><span class="mf">0.0415344954862</span><span class="p">,</span><span class="n">Mouse</span><span class="p">:</span><span class="mf">0.0399640478488</span><span class="p">):</span><span class="mf">0.0965731665767</span><span class="p">,</span><span class="n">Guinea_Pig</span><span class="p">:</span><span class="mf">0.07749120868</span><span class="p">):</span><span class="mf">0.0148299066203</span><span class="p">,(</span><span class="n">Squirrel</span><span class="p">:</span><span class="mf">0.0502430198655</span><span class="p">,</span><span class="n">Kangaroo_Rat</span><span class="p">:</span><span class="mf">0.0753162798415</span><span class="p">):</span><span class="mf">0.00416568798231</span><span class="p">):</span><span class="mf">0.00545532042101</span><span class="p">):</span><span class="mf">0.00328679821596</span><span class="p">,(</span><span class="n">Tree_Shrew</span><span class="p">:</span><span class="mf">0.0426560599163</span><span class="p">,((</span><span class="n">Tarsier</span><span class="p">:</span><span class="mf">0.0395620026083</span><span class="p">,((</span><span class="n">Macaque</span><span class="p">:</span><span class="mf">0.00608570187988</span><span class="p">,(</span><span class="n">Gorilla</span><span class="p">:</span><span class="mf">0.00224422775399</span><span class="p">,(</span><span class="n">Orangutan</span><span class="p">:</span><span class="mf">0.00178158136896</span><span class="p">,(</span><span class="n">Human</span><span class="p">:</span><span class="mf">0.00113846667515</span><span class="p">,</span><span class="n">Chimpanzee</span><span class="p">:</span><span class="mf">0.000802993594136</span><span class="p">):</span><span class="mf">0.000483490555002</span><span class="p">):</span><span class="mf">2.51049141848e-06</span><span class="p">):</span><span class="mf">0.00347997654954</span><span class="p">):</span><span class="mf">0.00821095330186</span><span class="p">,</span><span class="n">Marmoset</span><span class="p">:</span><span class="mf">0.0174481410002</span><span class="p">):</span><span class="mf">0.0135122407118</span><span class="p">):</span><span class="mf">0.00305192625139</span><span class="p">,(</span><span class="n">Mouse_Lemur</span><span class="p">:</span><span class="mf">0.0161443473009</span><span class="p">,</span><span class="n">Galagos</span><span class="p">:</span><span class="mf">0.0451624040731</span><span class="p">):</span><span class="mf">0.0145777943743</span><span class="p">):</span><span class="mf">0.00233717476908</span><span class="p">):</span><span class="mf">0.00310699260183</span><span class="p">):</span><span class="mf">0.00188081676512</span><span class="p">):</span><span class="mf">0.00884283494833</span><span class="p">):</span><span class="mf">0.00800323823718</span><span class="p">,(</span><span class="n">Sloth</span><span class="p">:</span><span class="mf">0.0286313631651</span><span class="p">,</span><span class="n">Armadillos</span><span class="p">:</span><span class="mf">0.0298203979513</span><span class="p">):</span><span class="mf">0.00653477704791</span><span class="p">):</span><span class="mf">0.100297249941</span><span class="p">):</span><span class="mf">0.13184348409</span><span class="p">);</span>
+<span class="p">(</span><span class="n">Chicken</span><span class="p">:</span><span class="mf">0.200683834898</span><span class="p">,((((((</span><span class="n">Hyrax</span><span class="p">:</span><span class="mf">0.116256868083</span><span class="p">,</span><span class="n">Elephant</span><span class="p">:</span><span class="mf">0.0380072794168</span><span class="p">):</span><span class="mf">0.0136744583945</span><span class="p">,</span><span class="n">Lesser_Hedgehog_Tenrec</span><span class="p">:</span><span class="mf">0.0757357089314</span><span class="p">):</span><span class="mf">0.0152092268668</span><span class="p">,(</span><span class="n">Armadillos</span><span class="p">:</span><span class="mf">0.0330496450788</span><span class="p">,</span><span class="n">Sloth</span><span class="p">:</span><span class="mf">0.0390897018537</span><span class="p">):</span><span class="mf">0.0223747307328</span><span class="p">):</span><span class="mf">0.00255549065834</span><span class="p">,((((</span><span class="n">Dog</span><span class="p">:</span><span class="mf">0.0380707200472</span><span class="p">,</span><span class="n">Cat</span><span class="p">:</span><span class="mf">0.0219888008619</span><span class="p">):</span><span class="mf">0.0146010837503</span><span class="p">,((</span><span class="n">Megabat</span><span class="p">:</span><span class="mf">0.026849094959</span><span class="p">,(</span><span class="n">Shrew</span><span class="p">:</span><span class="mf">0.0812377176667</span><span class="p">,</span><span class="n">Microbat</span><span class="p">:</span><span class="mf">0.0385531787149</span><span class="p">):</span><span class="mf">0.0207936007114</span><span class="p">):</span><span class="mf">0.0074741804449</span><span class="p">,(</span><span class="n">Dolphin</span><span class="p">:</span><span class="mf">0.0235088724544</span><span class="p">,(</span><span class="n">Pig</span><span class="p">:</span><span class="mf">0.0346116329606</span><span class="p">,(</span><span class="n">Cow</span><span class="p">:</span><span class="mf">0.0431980682584</span><span class="p">,</span><span class="n">Alpaca</span><span class="p">:</span><span class="mf">0.0323155644264</span><span class="p">):</span><span class="mf">0.00294880915206</span><span class="p">):</span><span class="mf">0.00313415983936</span><span class="p">):</span><span class="mf">0.00994396974098</span><span class="p">):</span><span class="mf">0.00246798483566</span><span class="p">):</span><span class="mf">0.00165823867717</span><span class="p">,(</span><span class="n">Horse</span><span class="p">:</span><span class="mf">0.037894764365</span><span class="p">,</span><span class="n">Hedgehog</span><span class="p">:</span><span class="mf">0.137100615862</span><span class="p">):</span><span class="mf">0.00546346949291</span><span class="p">):</span><span class="mf">0.0118186651971</span><span class="p">,((((</span><span class="n">Guinea_Pig</span><span class="p">:</span><span class="mf">0.0495811955458</span><span class="p">,</span><span class="n">Kangaroo_Rat</span><span class="p">:</span><span class="mf">0.0678327630112</span><span class="p">):</span><span class="mf">0.00709683048706</span><span class="p">,(</span><span class="n">Squirrel</span><span class="p">:</span><span class="mf">0.0377275552318</span><span class="p">,(</span><span class="n">Mouse</span><span class="p">:</span><span class="mf">0.0291923462182</span><span class="p">,</span><span class="n">Rat</span><span class="p">:</span><span class="mf">0.0305524733839</span><span class="p">):</span><span class="mf">0.116284752903</span><span class="p">):</span><span class="mf">0.00823842575795</span><span class="p">):</span><span class="mf">0.00774685443388</span><span class="p">,(</span><span class="n">Pika</span><span class="p">:</span><span class="mf">0.0595468891827</span><span class="p">,</span><span class="n">Rabbit</span><span class="p">:</span><span class="mf">0.0317487035181</span><span class="p">):</span><span class="mf">0.0375754712606</span><span class="p">):</span><span class="mf">0.0038912895723</span><span class="p">,(</span><span class="n">Tarsier</span><span class="p">:</span><span class="mf">0.0516873435361</span><span class="p">,((</span><span class="n">Marmoset</span><span class="p">:</span><span class="mf">0.0311370484253</span><span class="p">,((</span><span class="n">Orangutan</span><span class="p">:</span><span class="mf">0.0152083457523</span><span class="p">,(</span><span class="n">Gorilla</span><span class="p">:</span><span class="mf">0.00129651459821</span><span class="p">,(</span><span class="n">Human</span><span class="p">:</span><span class="mf">0.00245267408963</span><span class="p">,</span><span class="n">Chimpanzee</span><span class="p">:</span><span class="mf">0.0030493338097</span><span class="p">):</span><span class="mf">0.00121090801175</span><span class="p">):</span><span class="mf">0.00248508181011</span><span class="p">):</span><span class="mf">0.00382150588066</span><span class="p">,</span><span class="n">Macaque</span><span class="p">:</span><span class="mf">0.0111332008693</span><span class="p">):</span><span class="mf">0.00577878387711</span><span class="p">):</span><span class="mf">0.0137031584176</span><span class="p">,((</span><span class="n">Galagos</span><span class="p">:</span><span class="mf">0.0612751243277</span><span class="p">,</span><span class="n">Mouse_Lemur</span><span class="p">:</span><span class="mf">0.0229549694479</span><span class="p">):</span><span class="mf">0.0047800435683</span><span class="p">,</span><span class="n">Tree_Shrew</span><span class="p">:</span><span class="mf">0.183791419534</span><span class="p">):</span><span class="mf">0.00190591845589</span><span class="p">):</span><span class="mf">0.00370001159991</span><span class="p">):</span><span class="mf">0.0016619546699</span><span class="p">):</span><span class="mf">0.00626408623059</span><span class="p">):</span><span class="mf">0.00747947925016</span><span class="p">):</span><span class="mf">0.0885583652299</span><span class="p">,(</span><span class="n">Wallaby</span><span class="p">:</span><span class="mf">0.0394521811681</span><span class="p">,</span><span class="n">Opossum</span><span class="p">:</span><span class="mf">0.0396475744035</span><span class="p">):</span><span class="mf">0.106106659053</span><span class="p">):</span><span class="mf">0.0500235726093</span><span class="p">,</span><span class="n">Platypus</span><span class="p">:</span><span class="mf">0.107980129272</span><span class="p">):</span><span class="mf">0.200683834898</span><span class="p">);</span>
+<span class="p">(</span><span class="n">Chicken</span><span class="p">:</span><span class="mf">0.363547638048</span><span class="p">,(</span><span class="n">Platypus</span><span class="p">:</span><span class="mf">0.281150828862</span><span class="p">,((</span><span class="n">Kangaroo_Rat</span><span class="p">:</span><span class="mf">0.227154947424</span><span class="p">,(</span><span class="n">Squirrel</span><span class="p">:</span><span class="mf">0.0671153562038</span><span class="p">,((</span><span class="n">Guinea_Pig</span><span class="p">:</span><span class="mf">0.12219947807</span><span class="p">,(</span><span class="n">Mouse</span><span class="p">:</span><span class="mf">0.0285161251895</span><span class="p">,</span><span class="n">Rat</span><span class="p">:</span><span class="mf">0.0429846047319</span><span class="p">):</span><span class="mf">0.085590856818</span><span class="p">):</span><span class="mf">0.0140633344345</span><span class="p">,(((</span><span class="n">Pika</span><span class="p">:</span><span class="mf">0.0858655571682</span><span class="p">,</span><span class="n">Rabbit</span><span class="p">:</span><span class="mf">0.044473495109</span><span class="p">):</span><span class="mf">0.0275024940273</span><span class="p">,(((</span><span class="n">Tarsier</span><span class="p">:</span><span class="mf">0.0556802134764</span><span class="p">,((((</span><span class="n">Gorilla</span><span class="p">:</span><span class="mf">1.85580720032e-06</span><span class="p">,(</span><span class="n">Chimpanzee</span><span class="p">:</span><span class="mf">0.00352263735379</span><span class="p">,</span><span class="n">Human</span><span class="p">:</span><span class="mf">0.00210876209409</span><span class="p">):</span><span class="mf">1.85580720032e-06</span><span class="p">):</span><span class="mf">0.00195715763511</span><span class="p">,</span><span class="n">Orangutan</span><span class="p">:</span><span class="mf">0.0456676117485</span><span class="p">):</span><span class="mf">0.00894974100682</span><span class="p">,</span><span class="n">Macaque</span><span class="p">:</span><span class="mf">0.0174908800859</span><span class="p">):</span><span class="mf">0.00817949575529</span><span class="p">,</span><span class="n">Marmoset</span><span class="p">:</span><span class="mf">0.021105563553</span><span class="p">):</span><span class="mf">0.0124318568927</span><span class="p">):</span><span class="mf">0.00509050125734</span><span class="p">,(</span><span class="n">Mouse_Lemur</span><span class="p">:</span><span class="mf">0.0382624798616</span><span class="p">,</span><span class="n">Galagos</span><span class="p">:</span><span class="mf">0.0510280610378</span><span class="p">):</span><span class="mf">0.00679236389045</span><span class="p">):</span><span class="mf">0.00332142940613</span><span class="p">,((((</span><span class="n">Pig</span><span class="p">:</span><span class="mf">0.134682668683</span><span class="p">,(</span><span class="n">Dolphin</span><span class="p">:</span><span class="mf">0.0275396377239</span><span class="p">,</span><span class="n">Cow</span><span class="p">:</span><span class="mf">0.0627157724198</span><span class="p">):</span><span class="mf">0.00746789098307</span><span class="p">):</span><span class="mf">0.00249029049972</span><span class="p">,</span><span class="n">Alpaca</span><span class="p">:</span><span class="mf">0.0885204171047</span><span class="p">):</span><span class="mf">0.0124760191532</span><span class="p">,((</span><span class="n">Horse</span><span class="p">:</span><span class="mf">0.0767624652867</span><span class="p">,(</span><span class="n">Microbat</span><span class="p">:</span><span class="mf">0.0405942950832</span><span class="p">,</span><span class="n">Megabat</span><span class="p">:</span><span class="mf">0.0525907665956</span><span class="p">):</span><span class="mf">0.00926098341272</span><span class="p">):</span><span class="mf">0.00122479425368</span><span class="p">,((</span><span class="n">Shrew</span><span class="p">:</span><span class="mf">0.11653369162</span><span class="p">,(</span><span class="n">Dog</span><span class="p">:</span><span class="mf">0.0289418502698</span><span class="p">,</span><span class="n">Cat</span><span class="p">:</span><span class="mf">0.0327153402309</span><span class="p">):</span><span class="mf">0.0191229766832</span><span class="p">):</span><span class="mf">0.00359470401594</span><span class="p">,</span><span class="n">Hedgehog</span><span class="p">:</span><span class="mf">0.10121580374</span><span class="p">):</span><span class="mf">0.00102357688644</span><span class="p">):</span><span class="mf">0.00201060361489</span><span class="p">):</span><span class="mf">0.00833002542791</span><span class="p">,(</span><span class="n">Lesser_Hedgehog_Tenrec</span><span class="p">:</span><span class="mf">0.114841148989</span><span class="p">,(</span><span class="n">Elephant</span><span class="p">:</span><span class="mf">0.023590024411</span><span class="p">,</span><span class="n">Hyrax</span><span class="p">:</span><span class="mf">0.0905907317276</span><span class="p">):</span><span class="mf">0.0271765866075</span><span class="p">):</span><span class="mf">0.0153063247616</span><span class="p">):</span><span class="mf">0.00703229766306</span><span class="p">):</span><span class="mf">0.00231005504781</span><span class="p">):</span><span class="mf">0.00188518271632</span><span class="p">,((</span><span class="n">Sloth</span><span class="p">:</span><span class="mf">0.0488322211506</span><span class="p">,</span><span class="n">Armadillos</span><span class="p">:</span><span class="mf">0.0405879799233</span><span class="p">):</span><span class="mf">0.0160024505494</span><span class="p">,</span><span class="n">Tree_Shrew</span><span class="p">:</span><span class="mf">0.0606139860793</span><span class="p">):</span><span class="mf">1.85580720032e-06</span><span class="p">):</span><span class="mf">0.00486065707291</span><span class="p">):</span><span class="mf">0.00856501710121</span><span class="p">):</span><span class="mf">0.0164564018957</span><span class="p">):</span><span class="mf">0.0582168167265</span><span class="p">,(</span><span class="n">Opossum</span><span class="p">:</span><span class="mf">0.040186539964</span><span class="p">,</span><span class="n">Wallaby</span><span class="p">:</span><span class="mf">0.0490793403688</span><span class="p">):</span><span class="mf">0.0637562719933</span><span class="p">):</span><span class="mf">0.0711142632663</span><span class="p">):</span><span class="mf">0.363547638048</span><span class="p">);</span>
+<span class="p">(</span><span class="n">Chicken</span><span class="p">:</span><span class="mf">0.0872510956827</span><span class="p">,(</span><span class="n">Platypus</span><span class="p">:</span><span class="mf">0.0916288538349</span><span class="p">,(((</span><span class="n">Armadillos</span><span class="p">:</span><span class="mf">0.0232895399499</span><span class="p">,</span><span class="n">Sloth</span><span class="p">:</span><span class="mf">0.0265141705103</span><span class="p">):</span><span class="mf">0.0062947219024</span><span class="p">,((((((</span><span class="n">Cat</span><span class="p">:</span><span class="mf">0.0109115852854</span><span class="p">,</span><span class="n">Dog</span><span class="p">:</span><span class="mf">0.02699168323</span><span class="p">):</span><span class="mf">0.00646605982703</span><span class="p">,(</span><span class="n">Shrew</span><span class="p">:</span><span class="mf">0.0549090853451</span><span class="p">,</span><span class="n">Hedgehog</span><span class="p">:</span><span class="mf">0.0577385128521</span><span class="p">):</span><span class="mf">0.00221771946408</span><span class="p">):</span><span class="mf">0.00058852239009</span><span class="p">,(</span><span class="n">Horse</span><span class="p">:</span><span class="mf">0.0267251866821</span><span class="p">,(</span><span class="n">Alpaca</span><span class="p">:</span><span class="mf">0.0239421690218</span><span class="p">,(</span><span class="n">Pig</span><span class="p">:</span><span class="mf">0.020842146481</span><span class="p">,(</span><span class="n">Cow</span><span class="p">:</span><span class="mf">0.0318794216178</span><span class="p">,</span><span class="n">Dolphin</span><span class="p">:</span><span class="mf">0.00796368324917</span><span class="p">):</span><span class="mf">0.00660965147222</span><span class="p">):</span><span class="mf">0.00270509379588</span><span class="p">):</span><span class="mf">0.00698846088656</span><span class="p">):</span><span class="mf">0.000757566101585</span><span class="p">):</span><span class="mf">0.00111659914861</span><span class="p">,(</span><span class="n">Microbat</span><span class="p">:</span><span class="mf">0.0276314885711</span><span class="p">,</span><span class="n">Megabat</span><span class="p">:</span><span class="mf">0.0229243908415</span><span class="p">):</span><span class="mf">0.00301268258327</span><span class="p">):</span><span class="mf">0.0051566331974</span><span class="p">,(((</span><span class="n">Rabbit</span><span class="p">:</span><span class="mf">0.0278450399236</span><span class="p">,</span><span class="n">Pika</span><span class="p">:</span><span class="mf">0.0611711026038</span><span class="p">):</span><span class="mf">0.0145936465378</span><span class="p">,(</span><span class="n">Kangaroo_Rat</span><span class="p">:</span><span class="mf">0.0385707854864</span><span class="p">,(((</span><span class="n">Mouse</span><span class="p">:</span><span class="mf">0.0148402720551</span><span class="p">,</span><span class="n">Rat</span><span class="p">:</span><span class="mf">0.0292991044371</span><span class="p">):</span><span class="mf">0.0587207832435</span><span class="p">,</span><span class="n">Guinea_Pig</span><span class="p">:</span><span class="mf">0.0240753243326</span><span class="p">):</span><span class="mf">0.00870220278605</span><span class="p">,</span><span class="n">Squirrel</span><span class="p">:</span><span class="mf">0.0325047490768</span><span class="p">):</span><span class="mf">0.00151051853278</span><span class="p">):</span><span class="mf">0.00245728595295</span><span class="p">):</span><span class="mf">0.000835398494625</span><span class="p">,((</span><span class="n">Tree_Shrew</span><span class="p">:</span><span class="mf">0.0552870969104</span><span class="p">,(</span><span class="n">Marmoset</span><span class="p">:</span><span class="mf">0.0152446328987</span><span class="p">,(</span><span class="n">Macaque</span><span class="p">:</span><span class="mf">0.00417253367676</span><span class="p">,(</span><span class="n">Orangutan</span><span class="p">:</span><span class="mf">0.00199286961427</span><span class="p">,((</span><span class="n">Gorilla</span><span class="p">:</span><span class="mf">0.00198804193292</span><span class="p">,</span><span class="n">Chimpanzee</span><span class="p">:</span><span class="mf">0.000543933950245</span><span class="p">):</span><span class="mf">0.00200862822564</span><span class="p">,</span><span class="n">Human</span><span class="p">:</span><span class="mf">0.00394477113939</span><span class="p">):</span><span class="mf">0.00489498205984</span><span class="p">):</span><span class="mf">0.00274365141538</span><span class="p">):</span><span class="mf">0.00235501951006</span><span class="p">):</span><span class="mf">0.00743395447991</span><span class="p">):</span><span class="mf">0.00516839205442</span><span class="p">,((</span><span class="n">Galagos</span><span class="p">:</span><span class="mf">0.0310090103588</span><span class="p">,</span><span class="n">Mouse_Lemur</span><span class="p">:</span><span class="mf">0.0177229801708</span><span class="p">):</span><span class="mf">0.00580934445442</span><span class="p">,</span><span class="n">Tarsier</span><span class="p">:</span><span class="mf">0.0270569479657</span><span class="p">):</span><span class="mf">0.00108522165996</span><span class="p">):</span><span class="mf">0.00230590785071</span><span class="p">):</span><span class="mf">0.00382110603812</span><span class="p">):</span><span class="mf">0.00412040752982</span><span class="p">,(</span><span class="n">Lesser_Hedgehog_Tenrec</span><span class="p">:</span><span class="mf">0.07681892226</span><span class="p">,(</span><span class="n">Hyrax</span><span class="p">:</span><span class="mf">0.0352997058422</span><span class="p">,</span><span class="n">Elephant</span><span class="p">:</span><span class="mf">0.0255963744333</span><span class="p">):</span><span class="mf">0.00622402483904</span><span class="p">):</span><span class="mf">0.00366942698962</span><span class="p">):</span><span class="mf">0.00225650284946</span><span class="p">):</span><span class="mf">0.0640034221309</span><span class="p">,(</span><span class="n">Opossum</span><span class="p">:</span><span class="mf">0.0448248621967</span><span class="p">,</span><span class="n">Wallaby</span><span class="p">:</span><span class="mf">0.0203584121407</span><span class="p">):</span><span class="mf">0.0369839192823</span><span class="p">):</span><span class="mf">0.0253256436945</span><span class="p">):</span><span class="mf">0.0872510956827</span><span class="p">);</span>
+<span class="p">(</span><span class="n">Chicken</span><span class="p">:</span><span class="mf">0.0872523646315</span><span class="p">,(</span><span class="n">Platypus</span><span class="p">:</span><span class="mf">0.0916301259207</span><span class="p">,(((</span><span class="n">Sloth</span><span class="p">:</span><span class="mf">0.0265145897885</span><span class="p">,</span><span class="n">Armadillos</span><span class="p">:</span><span class="mf">0.023289909088</span><span class="p">):</span><span class="mf">0.00629479597571</span><span class="p">,((</span><span class="n">Lesser_Hedgehog_Tenrec</span><span class="p">:</span><span class="mf">0.0768204862882</span><span class="p">,(</span><span class="n">Hyrax</span><span class="p">:</span><span class="mf">0.035300420892</span><span class="p">,</span><span class="n">Elephant</span><span class="p">:</span><span class="mf">0.0255969008558</span><span class="p">):</span><span class="mf">0.00622397719316</span><span class="p">):</span><span class="mf">0.0036696290263</span><span class="p">,((((</span><span class="n">Pika</span><span class="p">:</span><span class="mf">0.0611721550847</span><span class="p">,</span><span class="n">Rabbit</span><span class="p">:</span><span class="mf">0.0278455247986</span><span class="p">):</span><span class="mf">0.014593882291</span><span class="p">,(</span><span class="n">Kangaroo_Rat</span><span class="p">:</span><span class="mf">0.038571522695</span><span class="p">,(</span><span class="n">Squirrel</span><span class="p">:</span><span class="mf">0.0325052334648</span><span class="p">,(</span><span class="n">Guinea_Pig</span><span class="p">:</span><span class="mf">0.0240757198167</span><span class="p">,(</span><span class="n">Mouse</span><span class="p">:</span><span class="mf">0.0148404490322</span><span class="p">,</span><span class="n">Rat</span><span class="p">:</span><span class="mf">0.0292995961211</span><span class="p">):</span><span class="mf">0.0587217346377</span><span class="p">):</span><span class="mf">0.00870228559982</span><span class="p">):</span><span class="mf">0.00151058896588</span><span class="p">):</span><span class="mf">0.00245731687145</span><span class="p">):</span><span class="mf">0.000835422642716</span><span class="p">,(((</span><span class="n">Marmoset</span><span class="p">:</span><span class="mf">0.0152448737567</span><span class="p">,(</span><span class="n">Macaque</span><span class="p">:</span><span class="mf">0.00417259735364</span><span class="p">,(</span><span class="n">Orangutan</span><span class="p">:</span><span class="mf">0.00199289871858</span><span class="p">,(</span><span class="n">Human</span><span class="p">:</span><span class="mf">0.00394484509718</span><span class="p">,(</span><span class="n">Gorilla</span><span class="p">:</span><span class="mf">0.00198807233434</span><span class="p">,</span><span class="n">Chimpanzee</span><span class="p">:</span><span class="mf">0.000543942780207</span><span class="p">):</span><span class="mf">0.00200862237432</span><span class="p">):</span><span class="mf">0.00489509096801</span><span class="p">):</span><span class="mf">0.00274370255366</span><span class="p">):</span><span class="mf">0.00235505447377</span><span class="p">):</span><span class="mf">0.00743408515979</span><span class="p">,</span><span class="n">Tree_Shrew</span><span class="p">:</span><span class="mf">0.0552879989092</span><span class="p">):</span><span class="mf">0.00516849444974</span><span class="p">,(</span><span class="n">Tarsier</span><span class="p">:</span><span class="mf">0.0270573707338</span><span class="p">,(</span><span class="n">Galagos</span><span class="p">:</span><span class="mf">0.0310095302094</span><span class="p">,</span><span class="n">Mouse_Lemur</span><span class="p">:</span><span class="mf">0.017723279285</span><span class="p">):</span><span class="mf">0.00580940192562</span><span class="p">):</span><span class="mf">0.0010852573422</span><span class="p">):</span><span class="mf">0.0023059247951</span><span class="p">):</span><span class="mf">0.00382112890082</span><span class="p">,((</span><span class="n">Microbat</span><span class="p">:</span><span class="mf">0.0276318928733</span><span class="p">,</span><span class="n">Megabat</span><span class="p">:</span><span class="mf">0.0229247321523</span><span class="p">):</span><span class="mf">0.00301272976514</span><span class="p">,(((</span><span class="n">Dog</span><span class="p">:</span><span class="mf">0.0269920866368</span><span class="p">,</span><span class="n">Cat</span><span class="p">:</span><span class="mf">0.0109117340273</span><span class="p">):</span><span class="mf">0.00646615984747</span><span class="p">,(</span><span class="n">Hedgehog</span><span class="p">:</span><span class="mf">0.0577393219705</span><span class="p">,</span><span class="n">Shrew</span><span class="p">:</span><span class="mf">0.0549096852912</span><span class="p">):</span><span class="mf">0.00221783481722</span><span class="p">):</span><span class="mf">0.000588532814399</span><span class="p">,((((</span><span class="n">Dolphin</span><span class="p">:</span><span class="mf">0.00796380082548</span><span class="p">,</span><span class="n">Cow</span><span class="p">:</span><span class="mf">0.0318799610589</span><span class="p">):</span><span class="mf">0.00660978674886</span><span class="p">,</span><span class="n">Pig</span><span class="p">:</span><span class="mf">0.0208424741514</span><span class="p">):</span><span class="mf">0.00270512213928</span><span class="p">,</span><span class="n">Alpaca</span><span class="p">:</span><span class="mf">0.0239425164456</span><span class="p">):</span><span class="mf">0.00698856657087</span><span class="p">,</span><span class="n">Horse</span><span class="p">:</span><span class="mf">0.0267255867517</span><span class="p">):</span><span class="mf">0.000757572059446</span><span class="p">):</span><span class="mf">0.00111661410035</span><span class="p">):</span><span class="mf">0.00515670631913</span><span class="p">):</span><span class="mf">0.00412046934232</span><span class="p">):</span><span class="mf">0.0022565402445</span><span class="p">):</span><span class="mf">0.064004430021</span><span class="p">,(</span><span class="n">Opossum</span><span class="p">:</span><span class="mf">0.044825426684</span><span class="p">,</span><span class="n">Wallaby</span><span class="p">:</span><span class="mf">0.0203588158256</span><span class="p">):</span><span class="mf">0.0369843254961</span><span class="p">):</span><span class="mf">0.0253261189247</span><span class="p">):</span><span class="mf">0.0872523646315</span><span class="p">);</span>
+<span class="p">(</span><span class="n">Chicken</span><span class="p">:</span><span class="mf">0.136546931027</span><span class="p">,(</span><span class="n">Platypus</span><span class="p">:</span><span class="mf">0.179266807368</span><span class="p">,((</span><span class="n">Wallaby</span><span class="p">:</span><span class="mf">0.0742084449676</span><span class="p">,</span><span class="n">Opossum</span><span class="p">:</span><span class="mf">0.0154310882909</span><span class="p">):</span><span class="mf">0.0563039240019</span><span class="p">,(((</span><span class="n">Hyrax</span><span class="p">:</span><span class="mf">0.129644086888</span><span class="p">,</span><span class="n">Elephant</span><span class="p">:</span><span class="mf">0.031659251204</span><span class="p">):</span><span class="mf">0.0143268807163</span><span class="p">,</span><span class="n">Lesser_Hedgehog_Tenrec</span><span class="p">:</span><span class="mf">0.128650372269</span><span class="p">):</span><span class="mf">0.0409400050467</span><span class="p">,((</span><span class="n">Sloth</span><span class="p">:</span><span class="mf">0.0401945330851</span><span class="p">,</span><span class="n">Armadillos</span><span class="p">:</span><span class="mf">0.0703578488285</span><span class="p">):</span><span class="mf">0.00539384033009</span><span class="p">,(((((</span><span class="n">Kangaroo_Rat</span><span class="p">:</span><span class="mf">0.132683890288</span><span class="p">,(</span><span class="n">Mouse</span><span class="p">:</span><span class="mf">0.038105296902</span><span class="p">,</span><span class="n">Rat</span><span class="p">:</span><span class="mf">0.0165828191058</span><span class="p">):</span><span class="mf">0.10420602639</span><span class="p">):</span><span class="mf">0.021357026115</span><span class="p">,(</span><span class="n">Squirrel</span><span class="p">:</span><span class="mf">0.0570591934752</span><span class="p">,</span><span class="n">Guinea_Pig</span><span class="p">:</span><span class="mf">0.123450064728</span><span class="p">):</span><span class="mf">0.0015978986721</span><span class="p">):</span><span class="mf">0.0135204598064</span><span class="p">,(((</span><span class="n">Shrew</span><span class="p">:</span><span class="mf">0.329997957366</span><span class="p">,</span><span class="n">Rabbit</span><span class="p">:</span><span class="mf">0.0479721226934</span><span class="p">):</span><span class="mf">0.0264631661777</span><span class="p">,</span><span class="n">Pika</span><span class="p">:</span><span class="mf">0.0898570404907</span><span class="p">):</span><span class="mf">0.0829986291266</span><span class="p">,</span><span class="n">Tree_Shrew</span><span class="p">:</span><span class="mf">0.103886397388</span><span class="p">):</span><span class="mf">0.0235443949706</span><span class="p">):</span><span class="mf">0.00722020890642</span><span class="p">,(</span><span class="n">Tarsier</span><span class="p">:</span><span class="mf">0.0427092341119</span><span class="p">,((</span><span class="n">Marmoset</span><span class="p">:</span><span class="mf">0.0283861371785</span><span class="p">,(</span><span class="n">Macaque</span><span class="p">:</span><span class="mf">0.0102085121417</span><span class="p">,(</span><span class="n">Orangutan</span><span class="p">:</span><span class="mf">0.00575016333401</span><span class="p">,(</span><span class="n">Gorilla</span><span class="p">:</span><span class="mf">0.00143134576028</span><span class="p">,(</span><span class="n">Chimpanzee</span><span class="p">:</span><span class="mf">0.00658928262202</span><span class="p">,</span><span class="n">Human</span><span class="p">:</span><span class="mf">0.00182469940144</span><span class="p">):</span><span class="mf">0.000171146114819</span><span class="p">):</span><span class="mf">0.00603167067159</span><span class="p">):</span><span class="mf">0.00319899297089</span><span class="p">):</span><span class="mf">0.00809430176493</span><span class="p">):</span><span class="mf">0.0234798973117</span><span class="p">,(</span><span class="n">Mouse_Lemur</span><span class="p">:</span><span class="mf">0.0266103355474</span><span class="p">,</span><span class="n">Galagos</span><span class="p">:</span><span class="mf">0.0456978386923</span><span class="p">):</span><span class="mf">0.0164229849235</span><span class="p">):</span><span class="mf">0.00207529168367</span><span class="p">):</span><span class="mf">0.00654968462797</span><span class="p">):</span><span class="mf">0.00714769766229</span><span class="p">,(</span><span class="n">Horse</span><span class="p">:</span><span class="mf">0.0396169605171</span><span class="p">,(((</span><span class="n">Microbat</span><span class="p">:</span><span class="mf">0.047595849708</span><span class="p">,</span><span class="n">Megabat</span><span class="p">:</span><span class="mf">0.059835503721</span><span class="p">):</span><span class="mf">0.0120860579436</span><span class="p">,(((</span><span class="n">Pig</span><span class="p">:</span><span class="mf">0.0651120644546</span><span class="p">,</span><span class="n">Dolphin</span><span class="p">:</span><span class="mf">0.0329684262625</span><span class="p">):</span><span class="mf">0.00414757197852</span><span class="p">,</span><span class="n">Cow</span><span class="p">:</span><span class="mf">0.0595758833579</span><span class="p">):</span><span class="mf">0.0053884852643</span><span class="p">,(</span><span class="n">Hedgehog</span><span class="p">:</span><span class="mf">0.189313098613</span><span class="p">,</span><span class="n">Alpaca</span><span class="p">:</span><span class="mf">0.0227612515551</span><span class="p">):</span><span class="mf">0.00742119716421</span><span class="p">):</span><span class="mf">0.00975692022533</span><span class="p">):</span><span class="mf">0.00323658354899</span><span class="p">,(</span><span class="n">Dog</span><span class="p">:</span><span class="mf">0.0526762139792</span><span class="p">,</span><span class="n">Cat</span><span class="p">:</span><span class="mf">0.0368973379242</span><span class="p">):</span><span class="mf">0.0224968449919</span><span class="p">):</span><span class="mf">0.00675354444647</span><span class="p">):</span><span class="mf">0.0166734796818</span><span class="p">):</span><span class="mf">0.0123173852589</span><span class="p">):</span><span class="mf">0.00255899406954</span><span class="p">):</span><span class="mf">0.117092071635</span><span class="p">):</span><span class="mf">0.0630748039873</span><span class="p">):</span><span class="mf">0.136546931027</span><span class="p">);</span>
+<span class="p">(</span><span class="n">Chicken</span><span class="p">:</span><span class="mf">0.0962057786784</span><span class="p">,((((</span><span class="n">Lesser_Hedgehog_Tenrec</span><span class="p">:</span><span class="mf">0.121912841265</span><span class="p">,(</span><span class="n">Elephant</span><span class="p">:</span><span class="mf">0.0247970277425</span><span class="p">,</span><span class="n">Hyrax</span><span class="p">:</span><span class="mf">0.0528046634988</span><span class="p">):</span><span class="mf">0.00627475514904</span><span class="p">):</span><span class="mf">0.0157583040789</span><span class="p">,((</span><span class="n">Sloth</span><span class="p">:</span><span class="mf">0.030639141293</span><span class="p">,</span><span class="n">Armadillos</span><span class="p">:</span><span class="mf">0.0236870304191</span><span class="p">):</span><span class="mf">0.0117810606426</span><span class="p">,(((</span><span class="n">Tree_Shrew</span><span class="p">:</span><span class="mf">0.0506820568419</span><span class="p">,((</span><span class="n">Galagos</span><span class="p">:</span><span class="mf">0.0443624057793</span><span class="p">,</span><span class="n">Mouse_Lemur</span><span class="p">:</span><span class="mf">0.0123110676846</span><span class="p">):</span><span class="mf">0.0113617905403</span><span class="p">,(</span><span class="n">Tarsier</span><span class="p">:</span><span class="mf">0.0334895625167</span><span class="p">,(</span><span class="n">Marmoset</span><span class="p">:</span><span class="mf">0.0190487929822</span><span class="p">,(</span><span class="n">Macaque</span><span class="p">:</span><span class="mf">0.00926549680305</span><span class="p">,((</span><span class="n">Gorilla</span><span class="p">:</span><span class="mf">0.00206666209068</span><span class="p">,(</span><span class="n">Human</span><span class="p">:</span><span class="mf">0.00473629891953</span><span class="p">,</span><span class="n">Chimpanzee</span><span class="p">:</span><span class="mf">0.00224099711542</span><span class="p">):</span><span class="mf">0.00069270288697</span><span class="p">):</span><span class="mf">0.00235139733674</span><span class="p">,</span><span class="n">Orangutan</span><span class="p">:</span><span class="mf">0.0066390788931</span><span class="p">):</span><span class="mf">0.0026306908598</span><span class="p">):</span><span class="mf">0.00444484174803</span><span class="p">):</span><span class="mf">0.0160250964103</span><span class="p">):</span><span class="mf">0.00295332919304</span><span class="p">):</span><span class="mf">0.00369348636522</span><span class="p">):</span><span class="mf">0.00114317695241</span><span class="p">,((</span><span class="n">Guinea_Pig</span><span class="p">:</span><span class="mf">0.0544832402943</span><span class="p">,((</span><span class="n">Kangaroo_Rat</span><span class="p">:</span><span class="mf">0.066095903567</span><span class="p">,(</span><span class="n">Rat</span><span class="p">:</span><span class="mf">0.0325671723434</span><span class="p">,</span><span class="n">Mouse</span><span class="p">:</span><span class="mf">0.0312417881819</span><span class="p">):</span><span class="mf">0.0626008124186</span><span class="p">):</span><span class="mf">0.0105178198062</span><span class="p">,</span><span class="n">Squirrel</span><span class="p">:</span><span class="mf">0.0432258565473</span><span class="p">):</span><span class="mf">0.00148358181329</span><span class="p">):</span><span class="mf">0.00640845292154</span><span class="p">,(</span><span class="n">Rabbit</span><span class="p">:</span><span class="mf">0.0387544256894</span><span class="p">,</span><span class="n">Pika</span><span class="p">:</span><span class="mf">0.0566856796269</span><span class="p">):</span><span class="mf">0.0271900267401</span><span class="p">):</span><span class="mf">0.00148040204008</span><span class="p">):</span><span class="mf">0.00273987639206</span><span class="p">,(((</span><span class="n">Microbat</span><span class="p">:</span><span class="mf">0.0633058799598</span><span class="p">,</span><span class="n">Megabat</span><span class="p">:</span><span class="mf">0.0318241610842</span><span class="p">):</span><span class="mf">0.0100337894072</span><span class="p">,(((</span><span class="n">Alpaca</span><span class="p">:</span><span class="mf">0.0521655408767</span><span class="p">,((</span><span class="n">Dolphin</span><span class="p">:</span><span class="mf">0.0215303597651</span><span class="p">,</span><span class="n">Cow</span><span class="p">:</span><span class="mf">0.0376235570243</span><span class="p">):</span><span class="mf">0.00646827245532</span><span class="p">,</span><span class="n">Pig</span><span class="p">:</span><span class="mf">0.0347679516373</span><span class="p">):</span><span class="mf">0.00296697102487</span><span class="p">):</span><span class="mf">0.0107914080416</span><span class="p">,(</span><span class="n">Hedgehog</span><span class="p">:</span><span class="mf">0.0744350347666</span><span class="p">,</span><span class="n">Horse</span><span class="p">:</span><span class="mf">0.0196597718449</span><span class="p">):</span><span class="mf">0.00322418581917</span><span class="p">):</span><span class="mf">0.000383888684706</span><span class="p">,</span><span class="n">Shrew</span><span class="p">:</span><span class="mf">0.0886761520204</span><span class="p">):</span><span class="mf">0.000435098958772</span><span class="p">):</span><span class="mf">0.000759807979492</span><span class="p">,(</span><span class="n">Cat</span><span class="p">:</span><span class="mf">0.028430848992</span><span class="p">,</span><span class="n">Dog</span><span class="p">:</span><span class="mf">0.0870898990636</span><span class="p">):</span><span class="mf">0.00920563592386</span><span class="p">):</span><span class="mf">0.00426228974108</span><span class="p">):</span><span class="mf">0.00418604886634</span><span class="p">):</span><span class="mf">0.00330750718834</span><span class="p">):</span><span class="mf">0.0603937607064</span><span class="p">,(</span><span class="n">Wallaby</span><span class="p">:</span><span class="mf">0.0307058542951</span><span class="p">,</span><span class="n">Opossum</span><span class="p">:</span><span class="mf">0.037966745428</span><span class="p">):</span><span class="mf">0.0564655354223</span><span class="p">):</span><span class="mf">0.0239513314234</span><span class="p">,</span><span class="n">Platypus</span><span class="p">:</span><span class="mf">0.144307625541</span><span class="p">):</span><span class="mf">0.0962057786784</span><span class="p">);</span>
+<span class="p">(</span><span class="n">Chicken</span><span class="p">:</span><span class="mf">0.199796810723</span><span class="p">,(</span><span class="n">Platypus</span><span class="p">:</span><span class="mf">0.201537316295</span><span class="p">,(((((</span><span class="n">Hyrax</span><span class="p">:</span><span class="mf">0.10501974541</span><span class="p">,</span><span class="n">Elephant</span><span class="p">:</span><span class="mf">0.0451963450468</span><span class="p">):</span><span class="mf">0.0316943222706</span><span class="p">,</span><span class="n">Lesser_Hedgehog_Tenrec</span><span class="p">:</span><span class="mf">0.167400430827</span><span class="p">):</span><span class="mf">0.00983114630382</span><span class="p">,(</span><span class="n">Armadillos</span><span class="p">:</span><span class="mf">0.0756595378885</span><span class="p">,</span><span class="n">Sloth</span><span class="p">:</span><span class="mf">0.0685625499476</span><span class="p">):</span><span class="mf">0.0267767875275</span><span class="p">):</span><span class="mf">0.00594499947469</span><span class="p">,(((</span><span class="n">Pika</span><span class="p">:</span><span class="mf">0.170949541065</span><span class="p">,</span><span class="n">Rabbit</span><span class="p">:</span><span class="mf">0.0757359210191</span><span class="p">):</span><span class="mf">0.0705864653424</span><span class="p">,((((</span><span class="n">Galagos</span><span class="p">:</span><span class="mf">0.0879337114072</span><span class="p">,</span><span class="n">Mouse_Lemur</span><span class="p">:</span><span class="mf">0.0548214689459</span><span class="p">):</span><span class="mf">0.0135964151469</span><span class="p">,(</span><span class="n">Marmoset</span><span class="p">:</span><span class="mf">0.0349718629994</span><span class="p">,(</span><span class="n">Macaque</span><span class="p">:</span><span class="mf">0.0134672951683</span><span class="p">,(</span><span class="n">Orangutan</span><span class="p">:</span><span class="mf">0.00326726698019</span><span class="p">,(</span><span class="n">Gorilla</span><span class="p">:</span><span class="mf">0.00684618802512</span><span class="p">,(</span><span class="n">Chimpanzee</span><span class="p">:</span><span class="mf">0.00294919459027</span><span class="p">,</span><span class="n">Human</span><span class="p">:</span><span class="mf">0.00488066360111</span><span class="p">):</span><span class="mf">0.00103060086267</span><span class="p">):</span><span class="mf">0.00494195443167</span><span class="p">):</span><span class="mf">0.00602603844384</span><span class="p">):</span><span class="mf">0.0111160977497</span><span class="p">):</span><span class="mf">0.033440776734</span><span class="p">):</span><span class="mf">0.00692701689399</span><span class="p">,</span><span class="n">Tarsier</span><span class="p">:</span><span class="mf">0.102366917184</span><span class="p">):</span><span class="mf">0.0156760876188</span><span class="p">,(</span><span class="n">Tree_Shrew</span><span class="p">:</span><span class="mf">0.111443952422</span><span class="p">,(((</span><span class="n">Mouse</span><span class="p">:</span><span class="mf">0.064858341486</span><span class="p">,</span><span class="n">Rat</span><span class="p">:</span><span class="mf">0.0353372424265</span><span class="p">):</span><span class="mf">0.133890997176</span><span class="p">,</span><span class="n">Kangaroo_Rat</span><span class="p">:</span><span class="mf">0.0979315353103</span><span class="p">):</span><span class="mf">0.0115172399649</span><span class="p">,(</span><span class="n">Squirrel</span><span class="p">:</span><span class="mf">0.096686096584</span><span class="p">,</span><span class="n">Guinea_Pig</span><span class="p">:</span><span class="mf">0.309699051274</span><span class="p">):</span><span class="mf">0.0116783220478</span><span class="p">):</span><span class="mf">0.011291738737</span><span class="p">):</span><span class="mf">1.59629207173e-06</span><span class="p">):</span><span class="mf">0.00720517873077</span><span class="p">):</span><span class="mf">0.00807878308857</span><span class="p">,(((</span><span class="n">Cat</span><span class="p">:</span><span class="mf">0.0306106744805</span><span class="p">,</span><span class="n">Dog</span><span class="p">:</span><span class="mf">0.15641086277</span><span class="p">):</span><span class="mf">0.0379620242673</span><span class="p">,((</span><span class="n">Microbat</span><span class="p">:</span><span class="mf">0.0498582966141</span><span class="p">,</span><span class="n">Megabat</span><span class="p">:</span><span class="mf">0.0514130854864</span><span class="p">):</span><span class="mf">0.0101379537554</span><span class="p">,(</span><span class="n">Shrew</span><span class="p">:</span><span class="mf">0.203365404698</span><span class="p">,</span><span class="n">Hedgehog</span><span class="p">:</span><span class="mf">0.0750407103774</span><span class="p">):</span><span class="mf">0.0321725446815</span><span class="p">):</span><span class="mf">0.00209122344249</span><span class="p">):</span><span class="mf">0.00422583105747</span><span class="p">,(</span><span class="n">Horse</span><span class="p">:</span><span class="mf">0.127368673363</span><span class="p">,(((</span><span class="n">Cow</span><span class="p">:</span><span class="mf">0.0747271996394</span><span class="p">,</span><span class="n">Dolphin</span><span class="p">:</span><span class="mf">0.0411039528561</span><span class="p">):</span><span class="mf">0.0132138037828</span><span class="p">,</span><span class="n">Pig</span><span class="p">:</span><span class="mf">0.04864252937</span><span class="p">):</span><span class="mf">0.00556265644297</span><span class="p">,</span><span class="n">Alpaca</span><span class="p">:</span><span class="mf">0.0426332868432</span><span class="p">):</span><span class="mf">0.0260327456733</span><span class="p">):</span><span class="mf">0.000809575142079</span><span class="p">):</span><span class="mf">0.0132559950395</span><span class="p">):</span><span class="mf">0.0101046253078</span><span class="p">):</span><span class="mf">0.130144877085</span><span class="p">,(</span><span class="n">Opossum</span><span class="p">:</span><span class="mf">0.0953789646792</span><span class="p">,</span><span class="n">Wallaby</span><span class="p">:</span><span class="mf">0.0749079886358</span><span class="p">):</span><span class="mf">0.136520826472</span><span class="p">):</span><span class="mf">0.0899630675968</span><span class="p">):</span><span class="mf">0.199796810723</span><span class="p">);</span>
+<span class="p">(</span><span class="n">Chicken</span><span class="p">:</span><span class="mf">0.131324902577</span><span class="p">,(</span><span class="n">Platypus</span><span class="p">:</span><span class="mf">0.115931817925</span><span class="p">,(</span><span class="n">Wallaby</span><span class="p">:</span><span class="mf">0.0243069979749</span><span class="p">,(((</span><span class="n">Cat</span><span class="p">:</span><span class="mf">0.0121107086226</span><span class="p">,(</span><span class="n">Tarsier</span><span class="p">:</span><span class="mf">0.0338299154439</span><span class="p">,((</span><span class="n">Tree_Shrew</span><span class="p">:</span><span class="mf">0.0561925754091</span><span class="p">,</span><span class="n">Hedgehog</span><span class="p">:</span><span class="mf">0.0806593403465</span><span class="p">):</span><span class="mf">0.00909809874502</span><span class="p">,</span><span class="n">Guinea_Pig</span><span class="p">:</span><span class="mf">0.0802306573812</span><span class="p">):</span><span class="mf">0.00154441457567</span><span class="p">):</span><span class="mf">0.0125595588154</span><span class="p">):</span><span class="mf">0.00208467527621</span><span class="p">,((</span><span class="n">Shrew</span><span class="p">:</span><span class="mf">0.0252299560508</span><span class="p">,</span><span class="n">Squirrel</span><span class="p">:</span><span class="mf">0.0301103816857</span><span class="p">):</span><span class="mf">0.00372833440828</span><span class="p">,((((</span><span class="n">Horse</span><span class="p">:</span><span class="mf">0.168382201136</span><span class="p">,(</span><span class="n">Opossum</span><span class="p">:</span><span class="mf">0.0849884309416</span><span class="p">,(</span><span class="n">Cow</span><span class="p">:</span><span class="mf">0.0631492904817</span><span class="p">,</span><span class="n">Marmoset</span><span class="p">:</span><span class="mf">0.0413893177713</span><span class="p">):</span><span class="mf">0.00661696369303</span><span class="p">):</span><span class="mf">0.013141169556</span><span class="p">):</span><span class="mf">0.000996699950011</span><span class="p">,</span><span class="n">Dog</span><span class="p">:</span><span class="mf">0.012660929514</span><span class="p">):</span><span class="mf">0.0535181690978</span><span class="p">,((</span><span class="n">Armadillos</span><span class="p">:</span><span class="mf">0.0191188605399</span><span class="p">,</span><span class="n">Sloth</span><span class="p">:</span><span class="mf">0.0147552062362</span><span class="p">):</span><span class="mf">0.0105502835479</span><span class="p">,((((</span><span class="n">Macaque</span><span class="p">:</span><span class="mf">0.0105142417943</span><span class="p">,(</span><span class="n">Orangutan</span><span class="p">:</span><span class="mf">0.00132658992773</span><span class="p">,(</span><span class="n">Gorilla</span><span class="p">:</span><span class="mf">0.00921096762721</span><span class="p">,(</span><span class="n">Human</span><span class="p">:</span><span class="mf">0.00343977892986</span><span class="p">,</span><span class="n">Chimpanzee</span><span class="p">:</span><span class="mf">0.00328116592198</span><span class="p">):</span><span class="mf">0.00154242613997</span><span class="p">):</span><span class="mf">0.00321327128677</span><span class="p">):</span><span class="mf">0.00573788783649</span><span class="p">):</span><span class="mf">0.020027568981</span><span class="p">,(</span><span class="n">Lesser_Hedgehog_Tenrec</span><span class="p">:</span><span class="mf">0.0463157372372</span><span class="p">,(</span><span class="n">Kangaroo_Rat</span><span class="p">:</span><span class="mf">0.057722587663</span><span class="p">,(</span><span class="n">Rat</span><span class="p">:</span><span class="mf">0.00578498230605</span><span class="p">,</span><span class="n">Mouse</span><span class="p">:</span><span class="mf">0.00486393336124</span><span class="p">):</span><span class="mf">0.0409934846526</span><span class="p">):</span><span class="mf">0.0114663481255</span><span class="p">):</span><span class="mf">1.18036861914e-06</span><span class="p">):</span><span class="mf">0.00443076951761</span><span class="p">,(</span><span class="n">Hyrax</span><span class="p">:</span><span class="mf">0.0303825007704</span><span class="p">,</span><span class="n">Elephant</span><span class="p">:</span><span class="mf">0.0435911258335</span><span class="p">):</span><span class="mf">0.00698518704561</span><span class="p">):</span><span class="mf">0.0031513437166</span><span class="p">,(</span><span class="n">Mouse_Lemur</span><span class="p">:</span><span class="mf">0.0218261026561</span><span class="p">,</span><span class="n">Galagos</span><span class="p">:</span><span class="mf">0.0307123985234</span><span class="p">):</span><span class="mf">0.00341459971514</span><span class="p">):</span><span class="mf">0.00188863518615</span><span class="p">):</span><span class="mf">0.00231423926746</span><span class="p">):</span><span class="mf">0.00098178405633</span><span class="p">,((</span><span class="n">Rabbit</span><span class="p">:</span><span class="mf">0.0674979164195</span><span class="p">,</span><span class="n">Pika</span><span class="p">:</span><span class="mf">0.0444724914265</span><span class="p">):</span><span class="mf">0.0362724413842</span><span class="p">,((</span><span class="n">Alpaca</span><span class="p">:</span><span class="mf">0.165481804929</span><span class="p">,</span><span class="n">Pig</span><span class="p">:</span><span class="mf">0.00902579360229</span><span class="p">):</span><span class="mf">0.0135565886552</span><span class="p">,</span><span class="n">Dolphin</span><span class="p">:</span><span class="mf">0.0340832806144</span><span class="p">):</span><span class="mf">0.0201152089184</span><span class="p">):</span><span class="mf">0.00239444781427</span><span class="p">):</span><span class="mf">0.00227958012377</span><span class="p">):</span><span class="mf">0.000951620155465</span><span class="p">):</span><span class="mf">0.00227647521544</span><span class="p">,(</span><span class="n">Microbat</span><span class="p">:</span><span class="mf">0.0456639755391</span><span class="p">,</span><span class="n">Megabat</span><span class="p">:</span><span class="mf">0.0116443252161</span><span class="p">):</span><span class="mf">0.00174774278949</span><span class="p">):</span><span class="mf">0.0577004093402</span><span class="p">):</span><span class="mf">0.0361601611508</span><span class="p">):</span><span class="mf">0.131324902577</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Ce fichier est directement analysable par Agatta. Les longueurs de branches ne sont pas utilisées par l’analyse à trois éléments, mais il n’est pas nécessaire de les supprimer.</p>
+<p>Il est tout à fait possible dans un arbre d’avoir des répétitions d’OTU, ce qui correspond à un cas de polymorphisme qui sera géré selon la méthode de free-paralogy subtree analysis (Nelson and Ladsiges 1996). Il n’y a aucun restriction sur l’échantillonage de chaque arbre. ,Il n’est pas nécessaire que les arbres aient exactement les mêmes taxons (ce qui correspond ici aux missing data).</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="references">
+<h1>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Gill, A. C., &amp; Leis, J. M. (2019). Phylogenetic position of the fish genera Lobotes, Datnioides and Hapalogenys, with a reappraisal of acanthuriform composition and relationships based on adult and larval morphology. Zootaxa, 4680(1), 1-81. <a class="reference external" href="https://doi.org/10.11646/zootaxa.4680.1.1">https://doi.org/10.11646/zootaxa.4680.1.1</a></p></li>
+<li><p>Cao, N., Zaragüeta Bagils, R., &amp; Vignes-Lebbe, R. (2007). Hierarchical representation of hypotheses of homology. Geodiversitas, 29(1), 5-15.</p></li>
+<li><p>Faure-Brac, M. G., Rineau, V., &amp; Bagils, R. Z. (2020). Rethinking Pleijel’s (1995) characters under a hierarchical point of view. bioRxiv, 2020-10.</p></li>
+<li><p>Nelson, G. J., &amp; Ladiges, P. Y. (1996). Paralogy in cladistic biogeography and analysis of paralogy-free subtrees. American Museum novitates, no. 3167.</p></li>
+<li><p>Rineau, V., Moncel, M. H., &amp; Zeitoun, V. (2023). Revealing evolutionary patterns behind homogeneity: the case of the Palaeolithic assemblages from Notarchirico (Southern Italy). Journal of Archaeological Method and Theory, 30(1), 203-238.</p></li>
+<li><p>Song, S., Liu, L., Edwards, S. V., &amp; Wu, S. (2012). Resolving conflict in eutherian mammal phylogeny using phylogenomics and the multispecies coalescent model. Proceedings of the National Academy of Sciences, 109(37), 14942-14947. <a class="reference external" href="https://doi.org/10.1073/pnas.1211733109">https://doi.org/10.1073/pnas.1211733109</a></p></li>
+<li><p>Zaragüeta Bagils, R., &amp; Bourdon, E. (2007). Three-item analysis: Hierarchical representation and treatment of missing and inapplicable data. Comptes Rendus Palevol, 6(6-7), 527-534.</p></li>
+</ul>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Tutorial.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Tutorial</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Output%20files.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Output files</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Input files</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hierarchical-matrix">Hierarchical matrix</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-de-la-matrice">Structure de la matrice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ancestral-derived-states-criteria">Ancestral/derived states: criteria</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-state-characters">Multi-state characters</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polymorphism-missing-and-inapplicable-data">Polymorphism, missing and inapplicable data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-formatting">File formatting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newick-file">Newick file</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Valentin Rineau
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

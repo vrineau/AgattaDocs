@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Presentation &#8212; AgattaDocs</title>
+    <title>Introduction to Agatta &#8212; AgattaDocs</title>
   
   
   
@@ -165,13 +165,17 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1 current active">
                 <a class="reference internal" href="#">
-                    Presentation
+                    Introduction to Agatta
                 </a>
             </li>
         </ul>
         <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Input%20files.html">Input files</a></li>
+
 <li class="toctree-l1"><a class="reference internal" href="Output%20files.html">Output files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Functions.html">Functions</a></li>
+
 </ul>
 
     </div>
@@ -354,7 +358,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Presentation</h1>
+    <h1>Introduction to Agatta</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -364,18 +368,13 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Presentation</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-and-support">Documentation and Support</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#usage-examples">Usage examples</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-analysis">Quick analysis</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cladistic-biogeography-analysis">Cladistic biogeography analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-and-requirements">Installation and requirements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-and-support">Documentation and Support</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bug-report">Bug report</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#license">License</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation">Citation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#license">License</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#citation">Citation</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -387,56 +386,42 @@
                 <article class="bd-article">
                   
   <img src="https://github.com/vrineau/agatta/blob/main/agatta/agatta.png?raw=true" alt="agatta_logotype" width="700"/>
-<section id="presentation">
-<h1>Presentation<a class="headerlink" href="#presentation" title="Link to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="introduction-to-agatta">
+<h1>Introduction to Agatta<a class="headerlink" href="#introduction-to-agatta" title="Link to this heading">#</a></h1>
 <p>Agatta is a python package for three-item analysis (Nelson and Platnick, 1991) and other rooted tree applications. Three-item analysis can be considered as a supertree method (Kitching et al., 1998). The input trees are decomposed into triplets, then coded using triplet matrix representation. Finally, a tree is estimated on the matrix using a congruence maximisation criterion. Agatta implements several triplet weighting schemes, and is technically close to the Weighted Minimum Triplet Inconsistency problem (Byrka et al. 2010), a triplet equivalent of the Weighted Minimum Quartet Inconsistency problem (Lafond and Scornavacca, 2019).</p>
 <p>Three-item analysis was originally conceived under the cladistic theory, and can be used for reconstructing the evolutionary history of various entities. The characters (input trees) can be morphological characters coded hierarchicaly (Cao et al., 2008), rooted gene trees (with or without duplication events) or any type of evolutionary hypotheses that can be represented as rooted trees. Three-item analysis is also used in vicariance biogeography (Morrone, 2008), where phylogenies are used as input trees to build areagrams representing relationships between biogeographical areas.</p>
 <p>Agatta is user-friendly and offers many specific features to help pre or postprocessing rooted trees. Such features include decomposing trees with duplicated tips into duplication-free subtrees, consensus methods, several triplet-based support metrics, precise tree description, character state test and mapping, and file reformating.</p>
-<p>##Installation</p>
+<section id="installation-and-requirements">
+<h2>Installation and requirements<a class="headerlink" href="#installation-and-requirements" title="Link to this heading">#</a></h2>
 <p>Agatta works on Windows, Unix/Linux and macOS.</p>
-<p>This package requires Python version 3.8 or higher.</p>
-<p>Agatta and all its dependencies can be installed using <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">Agatta</span></code>. Detailed explanations for installing Agatta are available in the <a class="reference internal" href="#"><span class="std std-doc">tutorial</span></a>.</p>
+<p>This package requires Python version 3.8 or higher.  It has been tested for 3.8, 3.9, 3.10, and 3.11 using ubuntu 20.04, macos 13, and windows 11.</p>
+<p>Agatta and all its dependencies can be installed using <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">Agatta</span></code> through the shell. More explanations for installing Agatta are available in the <a class="reference internal" href="#"><span class="std std-doc">tutorial</span></a>.</p>
 <p>The package implements a pipeline for efficient heuristic searches that requires the installation of WQFM (<a class="github reference external" href="https://github.com/Mahim1997/wQFM-2020">Mahim1997/wQFM-2020</a>), TNT (<a class="reference external" href="http://www.lillo.org.ar/phylogeny/tnt/">http://www.lillo.org.ar/phylogeny/tnt/</a>), or a PAUP* command-line binary (<a class="reference external" href="http://phylosolutions.com/paup-test">http://phylosolutions.com/paup-test</a>).</p>
 </section>
 <section id="documentation-and-support">
-<h1>Documentation and Support<a class="headerlink" href="#documentation-and-support" title="Link to this heading">#</a></h1>
-<p>The official repository is on <a class="reference external" href="https://github.com/vrineau/Agatta">GitHub</a></p>
-<p>A complete tutorial is <a class="reference internal" href="#"><span class="std std-doc">available here</span></a>.</p>
+<h2>Documentation and Support<a class="headerlink" href="#documentation-and-support" title="Link to this heading">#</a></h2>
+<p>A complete tutorial and documentation is <a class="reference internal" href="#"><span class="std std-doc">available on the documentation website</span></a>.</p>
+<p>The official repository is on <a class="reference external" href="https://github.com/vrineau/Agatta">GitHub</a>. Agatta is published on <a class="reference external" href="https://pypi.org/project/Agatta/">Pypi</a>.</p>
 <p>An help for all commands is available directly using <code class="docutils literal notranslate"><span class="pre">agatta</span> <span class="pre">help</span></code>.</p>
 <p>If you have questions, feel free to pull requests on <a class="reference external" href="https://github.com/vrineau/Agatta/issues">GitHub Issues</a>.</p>
 </section>
-<section id="usage-examples">
-<h1>Usage examples<a class="headerlink" href="#usage-examples" title="Link to this heading">#</a></h1>
-<section id="quick-analysis">
-<h2>Quick analysis<a class="headerlink" href="#quick-analysis" title="Link to this heading">#</a></h2>
-<p>Agatta allows several input trees formats like newick, nexus, nexml, or character matrix format. A generic analysis to do a three-item analysis on a collection of rooted trees stored in a file with default parameters (PAUP* heuristic search, 1000 replicates, triplets weighted using Fractional Weighting; Rineau et al. 2021) would be:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">agatta</span> <span class="n">analysis</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">software</span><span class="o">=</span><span class="n">paup</span> <span class="o">--</span><span class="n">softpath</span><span class="o">=/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">paup</span><span class="o">-</span><span class="n">executable</span>
-</pre></div>
-</div>
-<p>The <code class="docutils literal notranslate"><span class="pre">--softpath</span></code> and <code class="docutils literal notranslate"><span class="pre">--software=paup</span></code> flags are required.</p>
-</section>
-<section id="cladistic-biogeography-analysis">
-<h2>Cladistic biogeography analysis<a class="headerlink" href="#cladistic-biogeography-analysis" title="Link to this heading">#</a></h2>
-<p>To run a three-area analysis on a collection of rooted phylogenies stored in newick format in a file with default parameters (PAUP* heuristic search, 1000 replicates, triplets weighted according to Rineau et al. (2021), Multiple-Area Single Taxa automatically removed, repetitions managed using Triplet Maximisation Subtrees algorithm):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">agatta</span> <span class="n">analysis</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">software</span><span class="o">=</span><span class="n">paup</span> <span class="o">--</span><span class="n">softpath</span><span class="o">=/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">paup</span><span class="o">-</span><span class="n">executable</span>  <span class="o">--</span><span class="n">rosetta</span><span class="o">=&lt;</span><span class="n">mapfile</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-<p>This line is identical as for quick analysis plus a mapping file (<mapfile>) in csv with two columns to give the correspondance between taxa (left column) and areas (right column).</p>
-</section>
+<section id="bug-report">
+<h2>Bug report<a class="headerlink" href="#bug-report" title="Link to this heading">#</a></h2>
+<p>Contact <a class="reference external" href="mailto:valentin&#46;rineau&#37;&#52;&#48;sorbonne-universite&#46;fr">valentin<span>&#46;</span>rineau<span>&#64;</span>sorbonne-universite<span>&#46;</span>fr</a> or post on <a class="reference external" href="https://github.com/vrineau/Agatta/issues">Agatta issues page</a>.</p>
 </section>
 <section id="license">
-<h1>License<a class="headerlink" href="#license" title="Link to this heading">#</a></h1>
+<h2>License<a class="headerlink" href="#license" title="Link to this heading">#</a></h2>
 <p>The code is currently licensed under the GNU General Public License version 3.</p>
 </section>
 <section id="citation">
-<h1>Citation<a class="headerlink" href="#citation" title="Link to this heading">#</a></h1>
+<h2>Citation<a class="headerlink" href="#citation" title="Link to this heading">#</a></h2>
 <p>When using Agatta, please cite us (temporarily) as</p>
 <blockquote>
 <div><p>Rineau, V., Zaharias, P. (2025) Agatta (Version 0.9.0) [Software]. Github. <a class="github reference external" href="https://github.com/vrineau/Agatta">vrineau/Agatta</a>.</p>
 </div></blockquote>
 </section>
 <section id="references">
-<h1>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h1>
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Byrka, J., Guillemot, S., &amp; Jansson, J. (2010). New results on optimizing rooted triplets consistency. <em>Discrete Applied Mathematics</em>, 158(11), 1136-1147.</p></li>
 <li><p>Cao, N., Zaragüeta i Bagils, R., &amp; Vignes-Lebbe, R. (2007). Hierarchical representation of hypotheses of homology. <em>Geodiversitas</em>, 29(1), 5-15.</p></li>
@@ -447,6 +432,7 @@
 <li><p>Rineau, V., Zaragüeta i Bagils, R., &amp; Bardin, J. (2021). Information content of trees: three-taxon statements, inference rules and dependency. <em>Biological Journal of the Linnean Society</em>, 133(4), 1152-1170.</p></li>
 </ul>
 <p><em>Graphic chart by Malcolm T Sanders</em></p>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -507,18 +493,13 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Presentation</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-and-support">Documentation and Support</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#usage-examples">Usage examples</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-analysis">Quick analysis</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cladistic-biogeography-analysis">Cladistic biogeography analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-and-requirements">Installation and requirements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-and-support">Documentation and Support</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bug-report">Bug report</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#license">License</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation">Citation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#license">License</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#citation">Citation</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
-</ul>
-
   </nav></div>
 
 </div></div>
