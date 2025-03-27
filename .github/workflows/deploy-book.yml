@@ -36,10 +36,6 @@ jobs:
         jupyter-book build .
     - name: list dir
       run: ls
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: ./dist
     # Push the book's HTML to github-pages
     #    - name: GitHub Pages action
     #  uses: peaceiris/actions-gh-pages@v3.9.0
