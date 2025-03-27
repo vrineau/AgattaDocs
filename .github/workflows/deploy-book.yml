@@ -38,10 +38,8 @@ jobs:
       run: ls
     - name: Build the JupyterLite site
       run: |
-        cp README.md content
-        cp -r CM* content/
-        jupyter lite build --contents content --output-dir dist
-        cp -r _build/html dist/
+        jupyter lite build
+        cp -r _build/html/
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
