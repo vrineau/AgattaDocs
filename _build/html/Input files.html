@@ -369,7 +369,7 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Input files</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hierarchical-matrix">Hierarchical matrix</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-de-la-matrice">Structure de la matrice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-structure">Matrix structure</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ancestral-derived-states-criteria">Ancestral/derived states: criteria</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-state-characters">Multi-state characters</a></li>
 </ul>
@@ -397,8 +397,8 @@
 <p>Agatta accepts two file formats for cladistic analysis. Characters can be coded as a taxon/character matrix called a hierarchical matrix, or they can be coded directly as a list of trees in newick format. Since the fundamental principle of three-item analysis (3ia) is to code characters as hierarchical trees, break them down into three-item statements and recompose them in order to find the optimal tree (the one that maximises the number of three-item statements), the two representations are equivalent. Hierarchical matrices correspond to the classic use of taxon/character matrices in cladistics. Trees in the newick format are generally more commonly used to code gene trees obtained by other analyses as in other supertree methods.</p>
 <section id="hierarchical-matrix">
 <h2>Hierarchical matrix<a class="headerlink" href="#hierarchical-matrix" title="Link to this heading">#</a></h2>
-<section id="structure-de-la-matrice">
-<h3>Structure de la matrice<a class="headerlink" href="#structure-de-la-matrice" title="Link to this heading">#</a></h3>
+<section id="matrix-structure">
+<h3>Matrix structure<a class="headerlink" href="#matrix-structure" title="Link to this heading">#</a></h3>
 <p>The use of hierarchical matrices was first proposed by Cao et al. (2007). The example below is part of the example file available <a class="reference external" href="https://github.com/vrineau/Agatta/blob/main/data/gill_morpho.hmatrix">here</a>. It is a matrix taken from Gill and Leis (2019) analysed in 3ia.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -474,7 +474,7 @@
 <p>This choice can be made for all the characters by choosing a taxon which would be considered as the extra-group. However, the <code class="docutils literal notranslate"><span class="pre">hmatrix</span></code> format allows ancestral states to be defined character by character if the user so wishes.</p>
 <p>As each character is independent, the user can, for example, consider that for character 1, a given taxon can be chosen as the outgroup, but that another taxon is chosen as the outgroup for character 2.</p>
 <blockquote>
-<div><p>:memo: <strong>Note:</strong> Optimal trees obtained by three-element analysis are dichotomous and do not have a basal trichotomy, the basal trichotomy being an artefact linked to the a posteriori rooting of an unrooted tree. As the characters are hierarchical, they are rooted trees, and their analysis directly produces a rooted cladogram. Given this way of coding, it is not at all obligatory for the outgroup taxa to be included in the sampling. They can be included if the user wishes to test the monophyly of the ingroup.</p>
+<div><p><strong>Note:</strong> Optimal trees obtained by three-element analysis are dichotomous and do not have a basal trichotomy, the basal trichotomy being an artefact linked to the a posteriori rooting of an unrooted tree. As the characters are hierarchical, they are rooted trees, and their analysis directly produces a rooted cladogram. Given this way of coding, it is not at all obligatory for the outgroup taxa to be included in the sampling. They can be included if the user wishes to test the monophyly of the ingroup.</p>
 </div></blockquote>
 <p>In addition, it is possible to mix criteria, with the decision resting with the user, who has the systematic knowledge of his group to choose the relevant criterion for each character. For example, it is possible to choose an outgroup criterion for certain characters, and an ontogenetic criterion for others. In any case, Agatta allows all possibilities of hierarchical coding.</p>
 </section>
@@ -512,7 +512,7 @@
 <p>This suggests the existence of an additional clade:</p>
 <p><code class="docutils literal notranslate"><span class="pre">(Lobotes,</span> <span class="pre">Datnioides,</span> <span class="pre">Hapalogenys,(Chaetodontidae,</span> <span class="pre">(Pomacanthidae,</span> <span class="pre">Drepaneidae))</span></code></p>
 <blockquote>
-<div><p>:warning: <strong>Important:</strong> For a character state to be informative in 3ia, it is sufficient for at least one OTU to have the ancestral state and two OTUs to have the derived state, saying that two taxa are more closely related to each other than any is to a third.</p>
+<div><p><strong>Important:</strong> For a character state to be informative in 3ia, it is sufficient for at least one OTU to have the ancestral state and two OTUs to have the derived state, saying that two taxa are more closely related to each other than any is to a third.</p>
 </div></blockquote>
 <p>It is also possible to decide that state 2 is not ultimately derived from state 1:</p>
 <div class="pst-scrollable-table-container"><table class="table">
@@ -610,7 +610,7 @@ Acanthuridae;1;1;0;1;1;2;2;2;2;1;1;0;1;1;2;1;1;1;1;1;1;1;1;?;1;1;1;1;1;1;1;1;1;1
 </div>
 <p>Once saved in the correct format, check the file extension.</p>
 <blockquote>
-<div><p>:warning: <strong>Important:</strong> In order for Agatta to automatically recognise that it is a hierarchical matrix, you must change the .csv extension to <code class="docutils literal notranslate"><span class="pre">.hmatrix</span></code>.</p>
+<div><p><strong>Important:</strong> In order for Agatta to automatically recognise that it is a hierarchical matrix, you must change the .csv extension to <code class="docutils literal notranslate"><span class="pre">.hmatrix</span></code>.</p>
 </div></blockquote>
 <p>It is also possible with Agatta to analyse several hierarchical matrices combined in a single cladistic analysis. In this case, simply give the file names one after the other</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">agatta</span> <span class="n">analysis</span> <span class="n">file1</span><span class="o">.</span><span class="n">hmatrix</span> <span class="n">file2</span><span class="o">.</span><span class="n">hmatrix</span> <span class="o">...</span>
@@ -717,7 +717,7 @@ Acanthuridae;1;1;0;1;1;2;2;2;2;1;1;0;1;1;2;1;1;1;1;1;1;1;1;?;1;1;1;1;1;1;1;1;1;1
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Input files</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hierarchical-matrix">Hierarchical matrix</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-de-la-matrice">Structure de la matrice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-structure">Matrix structure</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ancestral-derived-states-criteria">Ancestral/derived states: criteria</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-state-characters">Multi-state characters</a></li>
 </ul>

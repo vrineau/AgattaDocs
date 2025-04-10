@@ -4,7 +4,7 @@ Agatta accepts two file formats for cladistic analysis. Characters can be coded 
 
 ## Hierarchical matrix
 
-### Structure de la matrice
+### Matrix structure
 
 The use of hierarchical matrices was first proposed by Cao et al. (2007). The example below is part of the example file available [here](https://github.com/vrineau/Agatta/blob/main/data/gill_morpho.hmatrix). It is a matrix taken from Gill and Leis (2019) analysed in 3ia.
 
@@ -40,7 +40,7 @@ This choice can be made for all the characters by choosing a taxon which would b
 
 As each character is independent, the user can, for example, consider that for character 1, a given taxon can be chosen as the outgroup, but that another taxon is chosen as the outgroup for character 2.
 
-> :memo: **Note:** Optimal trees obtained by three-element analysis are dichotomous and do not have a basal trichotomy, the basal trichotomy being an artefact linked to the a posteriori rooting of an unrooted tree. As the characters are hierarchical, they are rooted trees, and their analysis directly produces a rooted cladogram. Given this way of coding, it is not at all obligatory for the outgroup taxa to be included in the sampling. They can be included if the user wishes to test the monophyly of the ingroup. 
+> **Note:** Optimal trees obtained by three-element analysis are dichotomous and do not have a basal trichotomy, the basal trichotomy being an artefact linked to the a posteriori rooting of an unrooted tree. As the characters are hierarchical, they are rooted trees, and their analysis directly produces a rooted cladogram. Given this way of coding, it is not at all obligatory for the outgroup taxa to be included in the sampling. They can be included if the user wishes to test the monophyly of the ingroup. 
 
 In addition, it is possible to mix criteria, with the decision resting with the user, who has the systematic knowledge of his group to choose the relevant criterion for each character. For example, it is possible to choose an outgroup criterion for certain characters, and an ontogenetic criterion for others. In any case, Agatta allows all possibilities of hierarchical coding.
 
@@ -62,7 +62,7 @@ This suggests the existence of an additional clade:
 
 `(Lobotes, Datnioides, Hapalogenys,(Chaetodontidae, (Pomacanthidae, Drepaneidae))`
 
-> :warning: **Important:** For a character state to be informative in 3ia, it is sufficient for at least one OTU to have the ancestral state and two OTUs to have the derived state, saying that two taxa are more closely related to each other than any is to a third.
+> **Important:** For a character state to be informative in 3ia, it is sufficient for at least one OTU to have the ancestral state and two OTUs to have the derived state, saying that two taxa are more closely related to each other than any is to a third.
 
 It is also possible to decide that state 2 is not ultimately derived from state 1:
 
@@ -134,7 +134,7 @@ Acanthuridae;1;1;0;1;1;2;2;2;2;1;1;0;1;1;2;1;1;1;1;1;1;1;1;?;1;1;1;1;1;1;1;1;1;1
 
 Once saved in the correct format, check the file extension. 
 
-> :warning: **Important:** In order for Agatta to automatically recognise that it is a hierarchical matrix, you must change the .csv extension to `.hmatrix`.
+> **Important:** In order for Agatta to automatically recognise that it is a hierarchical matrix, you must change the .csv extension to `.hmatrix`.
 
 It is also possible with Agatta to analyse several hierarchical matrices combined in a single cladistic analysis. In this case, simply give the file names one after the other
 
