@@ -107,10 +107,6 @@ Finally, non-applicable data implies that no character state is satisfactory. In
 
 The hierarchical matrix file must be in csv format. You can create a hierarchical matrix directly in Excel and then save the file as a csv. 
 
-<p align="center">
-   <img src="https://imgur.com/1NTXU2m" alt="agatta_excel" width="300"/>
-</p>
-
 Commas are not allowed as separators, as they are used for polymorphism, so we recommend using a semicolon as a separator. If you are using Excel, save the file in **CSV: (separator: semicolon) (*.csv)** format. Opening the file with a text editor gives you:
 
 ```
