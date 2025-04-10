@@ -6,7 +6,10 @@
 
 The following figure summarises the Agatta pipeline for the `analysis` function.
 
-![6Cr1Rx1](https://hackmd.io/_uploads/By2bhjY3yg.png)
+<p align="center">
+   <img src="https://i.imgur.com/6Cr1Rx1.png" alt="agatta_main" width="550"/>
+</p>
+
 
 The following functions can be used when the user wants to perform only a specific part of the analysis pipeline:
 

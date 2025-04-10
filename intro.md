@@ -16,7 +16,7 @@ This package requires Python version 3.8 or higher.  It has been tested for 3.8,
 
 Agatta and all its dependencies can be installed using `pip install Agatta` through the shell. More explanations for installing Agatta are available in the [tutorial](intro.md).
 
-The package implements a pipeline for efficient heuristic searches that requires the installation of WQFM (https://github.com/Mahim1997/wQFM-2020), TNT (http://www.lillo.org.ar/phylogeny/tnt/), or a PAUP* command-line binary (http://phylosolutions.com/paup-test).
+The package implements a pipeline for efficient heuristic searches that requires the installation of WQFM (https://github.com/Mahim1997/wQFM-2020), TNT (http://www.lillo.org.ar/phylogeny/tnt/), wTREE-QMC (https://github.com/molloy-lab/TREE-QMC), or a PAUP* command-line binary (http://phylosolutions.com/paup-test).
 
 ## Documentation and Support
 
@@ -25,8 +25,6 @@ A complete tutorial and documentation is [available on the documentation website
 The official repository is on [GitHub](https://github.com/vrineau/Agatta). Agatta is published on [Pypi](https://pypi.org/project/Agatta/).
 
 An help for all commands is available directly using `agatta help`.
-
-If you have questions, feel free to pull requests on [GitHub Issues](https://github.com/vrineau/Agatta/issues).
 
 ## Bug report
 

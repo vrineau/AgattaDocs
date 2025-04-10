@@ -8,13 +8,11 @@ For any questions, issues, or bug report, please use the [issues github page](ht
 
 ## Before you start
 
-Refer to readme in addition to this tutorial. 
-
 Before starting this tutorial, please download all [datasets](https://github.com/vrineau/Agatta/tree/main/data).
 
 The tutorial requires the installation of the following programs:
-* PAUP* (part 'command-line binaries' for Linux et MacOS): https://paup.phylosolutions.com/get-paup/
-* Python 3.8 to 3.11: https://www.python.org/downloads/. Beginner tip: make sure that python can be called directly from the command prompt, so that you don't have to write the whole path from the python executable every time you want to run a command. This can be made by ticking the box '[Add Python 3 to PATH](https://miro.medium.com/max/1344/0*7nOyowsPsGI19pZT.png)' when installing Python 3 for the first time. If the 'pip' and 'python' commands doesn't work, reinstall python and tick the checkbox.
+* PAUP* (part 'command-line binaries' for Linux et MacOS): https://paup.phylosolutions.com/get-paup/ (note that other possibilities currently implemented for triplet heuristic search are WQFM, TNT, and wTREE-QMC)
+* Python 3 (3.8 to 3.11): https://www.python.org/downloads/. Beginner tip: make sure that python can be called directly from the command prompt, so that you don't have to write the whole path from the python executable every time you want to run a command. This can be made by ticking the box '[Add Python 3 to PATH](https://miro.medium.com/max/1344/0*7nOyowsPsGI19pZT.png)' when installing Python 3 for the first time. If the 'pip' and 'python' commands doesn't work, reinstall python and tick the checkbox.
 
 ### Installation
 
@@ -26,7 +24,7 @@ Open a terminal. Once the terminal opens, do
 pip install Agatta
 ```
 
-Python 3.7 or higher must be installed prior to Agatta (if pip is not recognised as a valid command, you may need to add Python to environment variables; an option is to rerun the Python installer and check the box `Add Python 3.6 to PATH`). To check that installation has worked properly, do
+Python 3.8 or higher must be installed prior to Agatta (if pip is not recognised as a valid command, you may need to add Python to environment variables; an option is to rerun the Python installer and check the box `Add Python 3. to PATH`). To check that installation has worked properly, do
 
 ```
 agatta --version
@@ -175,14 +173,6 @@ agatta consensus rslt_dowding.tre --prefix=consensus_dowding
 ```
 
 A reduced cladistic consensus can also be performed using the `--consensus=rcc` flag (Wilkinson 1994).
-
-## Conclusion
-
-All commands used herein have been conceived as modules. All of them are parts of the Agatta software, and can be synthetised into this workflow.
-
-<p align="center">
-   <img src="https://i.imgur.com/6Cr1Rx1.png" alt="agatta_main" width="550"/>
-</p>
 
 
 ## References

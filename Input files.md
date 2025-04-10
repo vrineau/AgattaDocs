@@ -1,13 +1,12 @@
 # Input files
 
-Deux formats de fichiers sont acceptés par Agatta afin de réaliser une analyse cladistique. Les caractères peuvent être codés sous la forme d'une matrice taxons/caractères appelée hierarchical matrix, ou bien peuvent être directement codés sous la forme d'une liste d'arbres en format newick. Le principe fondamental de la three-item analysis étant de coder les caractères sous la forme d'arbres hiérarchiques, de les décomposer en three-item statements puis de les recomposer afin de trouver l'arbre optimal (celui qui maximise le nombre de three-item statements), les deux représentations sont équivalentes. Les hierarchical matrix correspondent à l'usage classique des matrices taxons/caractères en cladistique. Les arbres en format newick seront quant à eux généralement plus utilisés pour coder des arbres de gènes obtenus par d'autres analyses comme des caractères en three-item analysis.
-
+Agatta accepts two file formats for cladistic analysis. Characters can be coded as a taxon/character matrix called a hierarchical matrix, or they can be coded directly as a list of trees in newick format. Since the fundamental principle of three-item analysis (3ia) is to code characters as hierarchical trees, break them down into three-item statements and recompose them in order to find the optimal tree (the one that maximises the number of three-item statements), the two representations are equivalent. Hierarchical matrices correspond to the classic use of taxon/character matrices in cladistics. Trees in the newick format are generally more commonly used to code gene trees obtained by other analyses as in other supertree methods.
 
 ## Hierarchical matrix
 
 ### Structure de la matrice
 
-L'utilisation des hierarchical matrix à été proposée pour la première fois par Cao et al. (2007). L'exemple ci-dessous est une partie du fichier exemple disponible [ici](https://github.com/vrineau/Agatta/blob/main/data/gill_morpho.hmatrix). Il s'agit d'une matrice reprise de Gill et Leis (2019) traitée par analyse à trois éléments.
+The use of hierarchical matrices was first proposed by Cao et al. (2007). The example below is part of the example file available [here](https://github.com/vrineau/Agatta/blob/main/data/gill_morpho.hmatrix). It is a matrix taken from Gill and Leis (2019) analysed in 3ia.
 
 |       | (0,(1)) | (0,(1)) | (0,(1)) | (0,(1)) |
 |----------------|---------|---------|---------|---------|
@@ -18,38 +17,37 @@ L'utilisation des hierarchical matrix à été proposée pour la première fois 
 | Pomacanthidae  | 1       | 0       | 1       | 0       | 0 |
 | Drepaneidae    | 1       | 1       | 1       | 0       | 0 |
 
-La première colonne correspond aux OTU (operationnal taxonomic units) de l'échantillonage taxonomique choisi par l'utilisateur. Tous les symboles sont acceptés excepté le point virgule.
+The first column corresponds to the OTUs (operational taxonomic units) of the taxonomic sampling chosen by the user. All symbols are accepted except the semicolon.
 
-Chaque colonne suivante correspond à un caractère, le chiffre de chaque cellule représentant l'état de caractère associé à l'OTU. Par exemple, *Lobotes* possède l'état 0 pour le caractère de la première colonne.
+Each subsequent column corresponds to a character, with the number in each cell representing the character state associated with its OTU. For example, *Lobotes* has the state 0 for the character in the first column.
 
 |  | (0,(1)) | 
 | -------- | -------- |
 | Lobotes     | 0     | 
 
-La première ligne correspond à la structure de chaque caractère de la matrice. Les caractères étant designés de manière hiérarchique, cette structure est représentée sous la forme d'un format newick (sans le point virgule final) représentant l'agencement entre les différents états de caractères. Tous les états de caractères de la colonne doivent être présents dans la structure, et uniquement eux. 
+The first line corresponds to the structure of each character in the matrix. As characters are designed as hierarchies, this structure is represented using the newick format (without the final semicolon) representing the ordering between the different character states. All the character states in the column must be present in the structure. 
 
-Prenons l'exemple du premier caractère, codé `(0,(1))`. Il s'agit d'un caractère binaire présentant les états 0 et 1. Ici, 0 est l'état racine. Il s'agit de l'état ancestral. L'état 1 étant inclus dans 0, cela indique que 1 dérive de 0. L'état 1 est donc l'état dérivé. Il indique que Chaetodontidae, Pomacanthidae et Drepaneidae se regroupent ensemble par rapport à Lobotes, Datnioides, et Hapalogenys. Le caractère 1 correspond à l'hypothèse cladistique suivante:
+Let's take the example of the first character, coded `(0,(1))`. This is a binary character with states 0 and 1. Here, 0 is the root state, i.e. the ancestral state. Since state 1 is included in 0, this indicates that 1 derives from 0. State 1 is therefore the derived state. It indicates that Chaetodontidae, Pomacanthidae and Drepaneidae are grouped together in relation to *Lobotes*, *Datnioides* and *Hapalogenys*. Character 1 corresponds to the following cladistic hypothesis:
 
 `(Lobotes, Datnioides, Hapalogenys,(Chaetodontidae, Pomacanthidae, Drepaneidae)`
 
 
 ### Ancestral/derived states: criteria
 
-C'est à l'utilisateur de renseigner pour chaque caractère quel est l'état ancestral et quel est l'état dérivé. Généralement, le choix se fait selon un critère extra-groupe. 
+It is up to the user to specify the ancestral state and the derived state for each character. Generally, the choice is made according to an outgroup criterion. 
 
-Ce choix peut être fait pour l'ensemble des caractères en choisissant un taxon qui serait considéré comme l'extra-groupe. Cependant, le format hmatrix permet également de définir les états ancestraux caractère par caractère si l'utilisateur le souhaite.
+This choice can be made for all the characters by choosing a taxon which would be considered as the extra-group. However, the `hmatrix` format allows ancestral states to be defined character by character if the user so wishes.
 
-Chaque caractère étant indépendant, l'utilisateur peut par exemple considérer que pour le caractère 1, un taxon donné puisse être choisi comme extra-groupe, mais qu'un autre taxon soit choisi comme extra-groupe pour le caractère 2.
+As each character is independent, the user can, for example, consider that for character 1, a given taxon can be chosen as the outgroup, but that another taxon is chosen as the outgroup for character 2.
 
-Etant donné cette manière de coder, il n'est pas du tout obligatoire que les taxons extra-groupes soient inclus dans l'échantillonage. Ils peuvent être inclus si l'utilisateur souhaite tester la monophylie de l'ingroup. 
+> :memo: **Note:** Optimal trees obtained by three-element analysis are dichotomous and do not have a basal trichotomy, the basal trichotomy being an artefact linked to the a posteriori rooting of an unrooted tree. As the characters are hierarchical, they are rooted trees, and their analysis directly produces a rooted cladogram. Given this way of coding, it is not at all obligatory for the outgroup taxa to be included in the sampling. They can be included if the user wishes to test the monophyly of the ingroup. 
 
-> Les arbres optimaux obtenus par analyse à trois éléments sont dichotomique et ne possèdent pas de trichotomie basale, la trichotomie basale étant un artefact lié à l'enracinement a posteriori d'un arbre non enraciné. Les caractères étant hiérarchiques, ils sont des arbres enracinés, et leur analyse produit directement un cladogramme enraciné.
+In addition, it is possible to mix criteria, with the decision resting with the user, who has the systematic knowledge of his group to choose the relevant criterion for each character. For example, it is possible to choose an outgroup criterion for certain characters, and an ontogenetic criterion for others. In any case, Agatta allows all possibilities of hierarchical coding.
 
-De plus, il est possible de panacher les critères, la décision revenant à l'utilisateur qui dispose de la connaissance systématique de son groupe pour choisir quel est le critère pertinent pour chaque caractère. Il est par exemple possible de choisir un critère extra-groupe pour certains caractères, et un critère ontogénétique pour d'autres. Dans tout les cas, Agatta permet toutes les possibilités de codage hiérarchique.
 
 ### Multi-state characters
 
-Nous avons présenté le cas le plus simple des caractères à deux états. Cependant, Agatta permet pour chaque caractère de coder autant d'états que souhaité. Dans le cas d'un caractère à plus de deux états, la logique reste la même. Par exemple, on pourrait décider que le premier caractère présente également un état 2 qui dérive de l'état 1:
+We have presented the simplest case of binary characters. However, Agatta allows as many states as desired to be encoded for each character. In the case of a character with more than two states, the logic remains the same. For example, we could decide that the first character also has a state 2 derived from state 1:
 
 |       | (0,(1,(2))) | 
 |----------------|---------|
@@ -60,13 +58,13 @@ Nous avons présenté le cas le plus simple des caractères à deux états. Cepe
 | Pomacanthidae  | 2       |
 | Drepaneidae    | 2       |
 
-Ce qui permet de postuler l'existence d'un clade supplémentaire:
+This suggests the existence of an additional clade:
 
 `(Lobotes, Datnioides, Hapalogenys,(Chaetodontidae, (Pomacanthidae, Drepaneidae))`
 
-Pour qu'un caractère soit informatif en analyse à trois éléments, il suffit au minimum qu'un OTU dispose de l'état ancestral et que deux OTU disposent de l'état dérivé, saying que two taxa are more closely related to each other than any is to a third.
+> :warning: **Important:** For a character state to be informative in 3ia, it is sufficient for at least one OTU to have the ancestral state and two OTUs to have the derived state, saying that two taxa are more closely related to each other than any is to a third.
 
-Il est également possible de décider que l'état 2 n'est finalement pas issu de l'état 1:
+It is also possible to decide that state 2 is not ultimately derived from state 1:
 
 |       | (0,(1),(2)) | 
 |----------------|---------|
@@ -77,42 +75,43 @@ Il est également possible de décider que l'état 2 n'est finalement pas issu d
 | Pomacanthidae  | 2       |
 | Drepaneidae    | 2       |
 
-Ce qui implique en changeant l'état de Chaetodontidae pour que l'état 1 reste informatif :
+This involves (changing the state of Chaetodontidae so that state 1 remains informative):
 
 `(Lobotes, Datnioides, (Hapalogenys,Chaetodontidae), (Pomacanthidae, Drepaneidae))`
 
- Voir également Faure-Brac et al. (2020) pour un autre cas concret de codage en hiérarchie.
+ See also Faure-Brac et al. (2020) for another empirical example of hierarchical coding.
 
 ## Polymorphism, missing and inapplicable data
 
-Le format hmatrix permet un traitement différencié du polymorphisme, des données non-applicables et des missing data (Zaragüeta Bagils and Bourdon 2007). 
+The `hmatrix` format allows differentiated treatment for the three issues of coding that are polymorphism, non-applicable data and missing data (Zaragüeta Bagils and Bourdon 2007). 
 
-Dans le cas du polymorphisme, les états de caractères doivent être renseignés en les séparant par une virgule:
+In the case of polymorphism, character states must be entered separated by a comma:
 
 |  | (0,(1)) | 
 | -------- | -------- |
 | Lobotes     | 0,1     | 
 
-Le polymorphisme est ensuite traité selon la méthode de free-paralogy subtree analysis (Nelson and Ladiges 1996). Par défaut, l'algorithme TMS de Rineau et al (2022) est utilisé pour réalisé la free-paralogy en conservant le maximum d'information cladistique.
+The polymorphism is then processed using the free-paralogy subtree analysis method (Nelson and Ladiges 1996). By default, the TMS algorithm of Rineau et al. (2022) is used to perform the free-paralogy while retaining as much cladistic information as possible, but the original algorithm of Nelson and Ladiges (1996) is also implemented (`--repetitions==FPS`).
 
-Dans le cas des missing data, il faut mettre un point d'interrogation pour indiquer que l'état est inconnu:
+In the case of missing data, a question mark is used to indicate that the state is unknown:
 
 |  | (0,(1)) | 
 | -------- | -------- |
 | Lobotes     | ?     | 
 
-Dans ce cas, *Lobotes* ne participe pas au caractère et ne génèrera par de three-item statements. 
+In this case, *Lobotes* does not participate in the character and does not generate three-item statements. 
 
-Enfin, les données non-applicables impliquent qu'aucun état de caractère n'est satisfaisant. Dans ce cas, nous conseillons de suivre la procédure de Zaragueta and Bourdon (2007) et de coder le non-applicable comme l'état racine (ici 0). En effet, pour un caractère hiérarchique, l'état racine ne doit pas nécessairement être défini, l'état racine correspondant simplement à la racine de l'hypothèse phylogénétique. Puisque le non-applicable implique qu'aucun état dérivé ne correspond, alors l'OTU doit être branché à la racine Contrairement à la missing data, le non-applicable est une information positive, ce codage permet donc de traduire cette connaissance positive en three-item statements.
+Finally, non-applicable data implies that no character state is satisfactory. In this case, we recommend following the procedure of Zaragueta and Bourdon (2007) and coding the non-applicable as the root state (here 0). Indeed, for a hierarchical character, the root state does not necessarily need to be defined, as the root state simply corresponds to the root of any phylogenetic hypothesis. Since non-applicability implies that no derived state corresponds, then the OTU must be connected to the root. Unlike missing data, non-applicable is positive information, so this encoding makes it possible to translate this positive knowledge into three-item statements.
 
 ## File formatting
 
+The hierarchical matrix file must be in csv format. You can create a hierarchical matrix directly in Excel and then save the file as a csv. 
 
-Le fichier hierarchical matrix doit obligatoirement être en format csv. Vous pouvez directement créer une matrice hiérarchique sur excel puis sauvegarder le fichier en csv. 
+<p align="center">
+   <img src="https://imgur.com/1NTXU2m" alt="agatta_excel" width="300"/>
+</p>
 
-![image](https://hackmd.io/_uploads/ryuo3Ot3Je.png)
-
-Les virgules n'étant pas admises comme séparateurs, celles-ci étant utilisées pour représenter le polymorphisme, nous conseillons d'utiliser le point virgule comme séparateur. Si vous utilisez excel, enregistrez le fichier en choisissant le format **CSV: (séparateur: point-virgule) (*.csv)**. En ouvrant le fichier avec un éditeur de texte, on obtient:
+Commas are not allowed as separators, as they are used for polymorphism, so we recommend using a semicolon as a separator. If you are using Excel, save the file in **CSV: (separator: semicolon) (*.csv)** format. Opening the file with a text editor gives you:
 
 ```
 ;(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1,(2)));(0,(1,(2)));(0,(1,(2)));(0,(1,(2)));(0,(1));(0,(1,(2)));(0,(1,(2)));(0,(1));(0,(1));(0,(1,(2)));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1));(0,(1))
@@ -133,9 +132,11 @@ Zanclidae;1;1;0;1;1;2;2;2;2;1;1;0;1;1;2;1;1;0;0;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;
 Acanthuridae;1;1;0;1;1;2;2;2;2;1;1;0;1;1;2;1;1;1;1;1;1;1;1;?;1;1;1;1;1;1;1;1;1;1;1;0;1;0;0;1;0;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;0;0;0;0;1;1
 ```
 
-Une fois sauvegardé dans le bon format, vérifier l'extension du fichier. **Pour qu'Agatta reconnaisse automatiquement qu'il s'agit d'une hierarchical matrix, vous devez modifier l'extension .csv en `.hmatrix`.**
+Once saved in the correct format, check the file extension. 
 
-Il est également possible avec Agatta d'analyser plusieurs hierarchical matrices combinées dans une seule analyse cladistique. Dans ce cas, il suffit de donner les noms des fichiers les uns à la suite des autres
+> :warning: **Important:** In order for Agatta to automatically recognise that it is a hierarchical matrix, you must change the .csv extension to `.hmatrix`.
+
+It is also possible with Agatta to analyse several hierarchical matrices combined in a single cladistic analysis. In this case, simply give the file names one after the other
 
 ```
   agatta analysis file1.hmatrix file2.hmatrix ...
@@ -143,10 +144,9 @@ Il est également possible avec Agatta d'analyser plusieurs hierarchical matrice
 
 ## Newick file
 
-Le format newick est le second format lisible par Agatta. Les arbres que l'on souhaite analyser doivent nécessairement être **enracinés**. Le fichier newick ne doit contenir que la liste des arbres, chaque ligne du fichier correspondant à un arbre. Le fichier exemple ici est celui de Song et al. (2012) disponible [ici](https://github.com/vrineau/Agatta/blob/main/data/song_gen.txt).
-https://github.com/vrineau/Agatta/blob/main/data/song_gen.txt
+The newick format is the second format readable by Agatta. The trees you wish to analyse must be **rooted**. The newick file must only contain the list of trees, each line of the file corresponding to a tree. The example file here is that of Song et al. (2012) available [here](https://github.com/vrineau/Agatta/blob/main/data/song_gen.txt).
 
-Voici les dix premières lignes du fichier:
+Here are the first lines of the file:
 
 ```
 (Chicken:0.131279775345,(((((((Marmoset:0.0204923957271,((Orangutan:0.00584046083478,((Human:0.00233080025572,Chimpanzee:0.00254878680241):0.000769089390244,Gorilla:0.00176992228314):0.00288531375061):0.00467903448512,Macaque:0.00908469530327):0.00734594094106):0.0296837843809,(Galagos:0.0600055740335,Mouse_Lemur:0.0694590103929):0.0196895108756):0.0085007567437,(Tree_Shrew:0.0534460635684,((((Mouse:0.0349199386903,Rat:0.0345660857178):0.0897288064714,Kangaroo_Rat:0.0649361322722):0.00930431451076,(Guinea_Pig:0.0711517239764,Squirrel:0.0481034437826):0.00498901022113):0.00991061551553,(Tarsier:0.217182450829,(Rabbit:0.0631257980439,Pika:0.087313728905):0.0291647109858):0.0339406584933):0.0030207288372):0.00372275015446):0.00872816165234,((((Microbat:0.0696356706177,Megabat:0.0390727680795):0.0086854921458,(Horse:0.0461656721413,((Dolphin:0.0272954336484,Cow:0.0443204506945):0.0116990944027,(Alpaca:0.051306106068,Pig:0.046407562946):0.00563985340054):0.0247170466469):0.00304339918494):0.00358264486119,(Dog:0.0580489915606,Cat:0.0519621580488):0.0244766206527):0.00494622940371,(Shrew:0.0804342808451,Hedgehog:0.139409366682):0.0210030742124):0.0130522958142):0.00809030960191,((Lesser_Hedgehog_Tenrec:0.156305507638,(Hyrax:0.064198126165,Elephant:0.0292820820713):0.00798950914849):0.0213905471889,(Sloth:0.0383674324752,Armadillos:0.0398080414024):0.0192051567243):0.00316664009477):0.054936328385,Platypus:0.599083136441):0.0419332947834,(Opossum:0.0426931845392,Wallaby:0.0489905851887):0.0753994602564):0.131279775345);
@@ -161,9 +161,9 @@ Voici les dix premières lignes du fichier:
 (Chicken:0.131324902577,(Platypus:0.115931817925,(Wallaby:0.0243069979749,(((Cat:0.0121107086226,(Tarsier:0.0338299154439,((Tree_Shrew:0.0561925754091,Hedgehog:0.0806593403465):0.00909809874502,Guinea_Pig:0.0802306573812):0.00154441457567):0.0125595588154):0.00208467527621,((Shrew:0.0252299560508,Squirrel:0.0301103816857):0.00372833440828,((((Horse:0.168382201136,(Opossum:0.0849884309416,(Cow:0.0631492904817,Marmoset:0.0413893177713):0.00661696369303):0.013141169556):0.000996699950011,Dog:0.012660929514):0.0535181690978,((Armadillos:0.0191188605399,Sloth:0.0147552062362):0.0105502835479,((((Macaque:0.0105142417943,(Orangutan:0.00132658992773,(Gorilla:0.00921096762721,(Human:0.00343977892986,Chimpanzee:0.00328116592198):0.00154242613997):0.00321327128677):0.00573788783649):0.020027568981,(Lesser_Hedgehog_Tenrec:0.0463157372372,(Kangaroo_Rat:0.057722587663,(Rat:0.00578498230605,Mouse:0.00486393336124):0.0409934846526):0.0114663481255):1.18036861914e-06):0.00443076951761,(Hyrax:0.0303825007704,Elephant:0.0435911258335):0.00698518704561):0.0031513437166,(Mouse_Lemur:0.0218261026561,Galagos:0.0307123985234):0.00341459971514):0.00188863518615):0.00231423926746):0.00098178405633,((Rabbit:0.0674979164195,Pika:0.0444724914265):0.0362724413842,((Alpaca:0.165481804929,Pig:0.00902579360229):0.0135565886552,Dolphin:0.0340832806144):0.0201152089184):0.00239444781427):0.00227958012377):0.000951620155465):0.00227647521544,(Microbat:0.0456639755391,Megabat:0.0116443252161):0.00174774278949):0.0577004093402):0.0361601611508):0.131324902577);
 ```
 
-Ce fichier est directement analysable par Agatta. Les longueurs de branches ne sont pas utilisées par l'analyse à trois éléments, mais il n'est pas nécessaire de les supprimer.
+This file can be analysed directly by Agatta. Branch lengths are not used by 3ia, but it is not necessary to delete them.
 
-Il est tout à fait possible dans un arbre d'avoir des répétitions d'OTU, ce qui correspond à un cas de polymorphisme qui sera géré selon la méthode de free-paralogy subtree analysis (Nelson and Ladsiges 1996). Il n'y a aucun restriction sur l'échantillonage de chaque arbre. ,Il n'est pas nécessaire que les arbres aient exactement les mêmes taxons (ce qui correspond ici aux missing data).
+It is quite possible to have OTU repeated within a tree, which corresponds to polymorphism. Polymorphism is managed prior analysis using the free-paralogy subtree analysis method (Nelson and Ladsiges 1996). There are no restrictions on the sampling of each tree. It is not necessary for the trees to have exactly the same taxa (which corresponds here to missing data).
 
 # References
 
